@@ -116,7 +116,7 @@ const Activities = () => {
           ].map((activity) => (
             <div
               key={activity}
-              className="bg-[#E5DEFF] p-4 rounded-lg shadow-sm"
+              className="bg-[#F2FCE2] p-4 rounded-lg shadow-sm"
             >
               <p className="font-medium text-[#7E69AB]">{activity}</p>
             </div>
