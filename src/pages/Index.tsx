@@ -179,7 +179,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 bg-[#F2FCE2]">
         <div className="container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center scroll-animate">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">About Us</h2>
