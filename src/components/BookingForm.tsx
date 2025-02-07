@@ -14,6 +14,12 @@ const BookingForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -21,14 +27,21 @@ const BookingForm = () => {
     try {
       const form = e.currentTarget;
       const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
 
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Accept": "application/json"
+      // Add form-name field for Netlify
+      const payload = {
+        'form-name': 'booking',
+        ...data
+      };
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
         },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encode(payload)
       });
 
       console.log('Form submission response:', response);
@@ -59,7 +72,7 @@ const BookingForm = () => {
   return (
     <form
       name="booking"
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
