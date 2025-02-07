@@ -70,7 +70,7 @@ const Index = () => {
             className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-6 md:mb-8 animate-fade-in"
           />
           <h1 className="text-3xl md:text-6xl font-bold mb-4 animate-fade-up text-white leading-tight">
-            Elevating your family life,<br />one experience at a time.
+            Elevating your family&nbsp;life,<br />one experience at a&nbsp;time.
           </h1>
           <p className="inline-block bg-[#F97316] px-4 py-2 rounded-full text-lg md:text-xl mb-8 animate-fade-up text-secondary-foreground whitespace-nowrap">
             EXPLORE WELLNESS at Our Retreats
