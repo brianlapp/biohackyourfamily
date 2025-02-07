@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -31,11 +32,10 @@ const BookingForm = () => {
       const response = await fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: encode({
-          'form-name': 'booking',
+          'form-name': 'contact-form',
           ...data
         })
       });
@@ -48,7 +48,6 @@ const BookingForm = () => {
           description: "Your booking request has been submitted. We'll be in touch soon!",
           duration: 5000,
         });
-
         form.reset();
       } else {
         throw new Error(`Form submission failed with status: ${response.status}`);
@@ -67,15 +66,19 @@ const BookingForm = () => {
 
   return (
     <form
-      name="booking"
+      name="contact-form"
       method="POST"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-6 max-w-md mx-auto"
     >
-      <input type="hidden" name="form-name" value="booking" />
-      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact-form" />
+      <p className="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
       
       <div className="space-y-2">
         <label htmlFor="firstName" className="block text-sm font-medium">
@@ -183,3 +186,4 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
+
