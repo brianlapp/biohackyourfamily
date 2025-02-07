@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Hero from './sections/Hero';
 import RetreatInfo from './sections/RetreatInfo';
 import Activities from './sections/Activities';
+import AboutUs from './sections/AboutUs';
 import BookingSection from './sections/BookingSection';
 import Contact from './sections/Contact';
 
@@ -37,6 +38,7 @@ const Index = () => {
       <Hero />
       <RetreatInfo />
       <Activities />
+      <AboutUs />
       <BookingSection />
       <Contact />
     </div>
