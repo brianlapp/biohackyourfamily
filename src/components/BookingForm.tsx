@@ -47,8 +47,8 @@ const BookingForm = () => {
     console.log('Submitting form with data:', formBody);
 
     try {
-      // Target Netlify's form handler with cache-busting
-      const response = await fetch("/?no-cache=1", {
+      // Target Netlify's form submission endpoint with the form name
+      const response = await fetch("/booking", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/x-www-form-urlencoded',
