@@ -92,11 +92,11 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="scroll-animate">
+            <div className="scroll-animate h-[400px]">
               <img
                 src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
                 alt="Retreat activities"
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg w-full h-full object-cover"
               />
             </div>
             <div className="space-y-6 scroll-animate">
