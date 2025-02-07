@@ -1,5 +1,3 @@
 
-/booking  /.netlify/functions/booking  200
-/booking  /  200!  GET
 /* /index.html 200
 /.netlify/functions/* /.netlify/functions/:splat 200
