@@ -20,7 +20,7 @@ const Activities = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {/* Weekend Retreat Package */}
-          <div className="bg-[#9b87f5]/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-[#9b87f5]/20">
+          <div className="bg-[#9b87f5]/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-[#9b87f5]/20 flex flex-col">
             <div className="h-48 relative">
               <img 
                 src="/lovable-uploads/79e84c88-cfd7-400a-92d8-4ba34792518d.png"
@@ -28,9 +28,9 @@ const Activities = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="p-8">
+            <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">Weekend Retreat with Cabin Experience</h3>
-              <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4">Limited cabins available!</Badge>
+              <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4 w-fit">Limited cabins available!</Badge>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <span className="mr-2 text-[#7E69AB]">•</span>
@@ -62,7 +62,7 @@ const Activities = () => {
                 table with 4 chairs, cooking accessories, gas BBQ, outdoor picnic table with campfire pit.
                 Heated private showers and washrooms available.
               </p>
-              <div className="text-center">
+              <div className="text-center mt-auto">
                 <a
                   href="#booking"
                   className="inline-block bg-[#7E69AB] text-white px-8 py-3 rounded-lg hover:bg-[#7E69AB]/90 transition-all"
@@ -74,7 +74,7 @@ const Activities = () => {
           </div>
 
           {/* One Day Retreat Package */}
-          <div className="bg-[#D6BCFA]/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-[#D6BCFA]/30">
+          <div className="bg-[#D6BCFA]/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-[#D6BCFA]/30 flex flex-col">
             <div className="h-48 relative">
               <img 
                 src="/lovable-uploads/b0b8adf0-0b94-4af4-b460-232735a103d9.png"
@@ -82,9 +82,9 @@ const Activities = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="p-8">
+            <div className="p-8 flex flex-col flex-grow">
               <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">1 Full Day Retreat</h3>
-              <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4">Perfect for day visitors!</Badge>
+              <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4 w-fit">Perfect for day visitors!</Badge>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <span className="mr-2 text-[#7E69AB]">•</span>
@@ -115,7 +115,7 @@ const Activities = () => {
                 Join us for a full day of activities and workshops without the overnight stay.
                 Perfect for those who want to experience the retreat atmosphere while returning home in the evening.
               </p>
-              <div className="text-center">
+              <div className="text-center mt-auto">
                 <a
                   href="#booking"
                   className="inline-block bg-[#7E69AB] text-white px-8 py-3 rounded-lg hover:bg-[#7E69AB]/90 transition-all"
