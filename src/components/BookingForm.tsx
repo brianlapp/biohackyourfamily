@@ -10,6 +10,12 @@ import {
   SelectValue,
 } from "./ui/select";
 
+// Extend form props to properly type Netlify attributes
+interface NetlifyFormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+  'data-netlify'?: boolean;
+  'data-netlify-honeypot'?: string;
+}
+
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,19 +40,17 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/.netlify/functions/submission-created", {
+      // Submit directly to Netlify's form handling endpoint
+      const response = await fetch("/", {
         method: 'POST',
         headers: { 
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: encode({
           'form-name': 'booking',
           ...formData
         })
       });
-
-      console.log('Form submission response:', response);
 
       if (response.ok) {
         toast({
@@ -80,8 +84,15 @@ const BookingForm = () => {
 
   // This is a static form that Netlify will detect during build
   if (typeof window === 'undefined') {
+    const formProps: NetlifyFormProps = {
+      name: "booking",
+      'data-netlify': true,
+      'data-netlify-honeypot': "bot-field",
+      hidden: true
+    };
+
     return (
-      <form name="booking" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form {...formProps}>
         <input type="hidden" name="form-name" value="booking" />
         <input type="text" name="firstName" />
         <input type="text" name="lastName" />
@@ -94,16 +105,17 @@ const BookingForm = () => {
     );
   }
 
+  const formProps: NetlifyFormProps = {
+    name: "booking",
+    method: "POST",
+    'data-netlify': true,
+    'data-netlify-honeypot': "bot-field",
+    className: "space-y-6 max-w-md mx-auto",
+    onSubmit: handleSubmit
+  };
+
   return (
-    <form
-      name="booking"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      className="space-y-6 max-w-md mx-auto"
-      onSubmit={handleSubmit}
-      action="/success"
-    >
+    <form {...formProps}>
       <input type="hidden" name="form-name" value="booking" />
       <div hidden>
         <input name="bot-field" />
