@@ -30,20 +30,16 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#F2FCE2', // Soft Green
-          foreground: '#1A1F2C',
+          DEFAULT: '#4CAF50', // Contrasting Green
+          foreground: '#FFFFFF',
         },
         secondary: {
           DEFAULT: '#FEC6A1', // Soft Orange
           foreground: '#1A1F2C',
         },
         accent: {
-          DEFAULT: '#0EA5E9', // Ocean Blue for CTA
+          DEFAULT: '#2196F3', // Blue for CTA
           foreground: '#FFFFFF',
-        },
-        muted: {
-          DEFAULT: '#FEF7CD', // Soft Yellow
-          foreground: '#6E59A5',
         },
       },
       keyframes: {
@@ -74,3 +70,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
