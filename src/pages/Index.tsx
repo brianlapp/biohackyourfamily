@@ -115,7 +115,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-[#F2FCE2]">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What to Expect</h2>
           
