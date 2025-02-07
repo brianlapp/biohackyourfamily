@@ -1,6 +1,7 @@
 
 import React from 'react';
 import GalleryImage from '../components/GalleryImage';
+import { Badge } from '@/components/ui/badge';
 
 const Activities = () => {
   return (
@@ -21,7 +22,7 @@ const Activities = () => {
           {/* Weekend Retreat Package */}
           <div className="bg-[#9b87f5]/10 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-[#9b87f5]/20">
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">Weekend Retreat with Cabin Experience</h3>
-            <p className="text-[#9b87f5] font-medium mb-4">Limited cabins available!</p>
+            <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4">Limited cabins available!</Badge>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <span className="mr-2 text-[#7E69AB]">•</span>
@@ -66,7 +67,7 @@ const Activities = () => {
           {/* One Day Retreat Package */}
           <div className="bg-[#D6BCFA]/20 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-[#D6BCFA]/30">
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">1 Full Day Retreat</h3>
-            <p className="text-[#9b87f5] font-medium mb-4">Perfect for day visitors!</p>
+            <Badge variant="secondary" className="bg-[#9b87f5]/20 text-[#7E69AB] mb-4">Perfect for day visitors!</Badge>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <span className="mr-2 text-[#7E69AB]">•</span>
@@ -108,7 +109,7 @@ const Activities = () => {
           </div>
         </div>
 
-        {/* Gallery section moved here */}
+        {/* Gallery section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 mb-12 scroll-animate">
           {[
             {
@@ -146,4 +147,3 @@ const Activities = () => {
 };
 
 export default Activities;
-
