@@ -35,7 +35,8 @@ const BookingForm = () => {
         ...data
       };
 
-      const response = await fetch('/', {
+      // Changed the fetch URL to match Netlify's form submission endpoint
+      const response = await fetch('/.netlify/functions/submission-created', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
