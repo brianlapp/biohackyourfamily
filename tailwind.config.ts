@@ -34,7 +34,7 @@ export default {
           foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#FEC6A1', // Soft Orange
+          DEFAULT: '#F97316', // Updated to the new orange
           foreground: '#1A1F2C',
         },
       },
