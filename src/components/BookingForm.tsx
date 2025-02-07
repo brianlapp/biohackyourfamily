@@ -34,7 +34,7 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch("/.netlify/functions/submission-created", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -81,7 +81,7 @@ const BookingForm = () => {
   // This is a static form that Netlify will detect during build
   if (typeof window === 'undefined') {
     return (
-      <form name="booking" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="booking" netlify netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="booking" />
         <input type="text" name="firstName" />
         <input type="text" name="lastName" />
@@ -102,6 +102,7 @@ const BookingForm = () => {
       data-netlify-honeypot="bot-field"
       className="space-y-6 max-w-md mx-auto"
       onSubmit={handleSubmit}
+      action="/success"
     >
       <input type="hidden" name="form-name" value="booking" />
       <div hidden>
