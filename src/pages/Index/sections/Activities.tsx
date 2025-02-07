@@ -1,3 +1,4 @@
+
 import React from 'react';
 import GalleryImage from '../components/GalleryImage';
 
@@ -128,22 +129,6 @@ const Activities = () => {
             }
           ].map((image, index) => (
             <GalleryImage key={index} {...image} />
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
-          {[
-            "Family Cooking", "Outdoor Activities",
-            "Digital Detox", "Wellness Workshops",
-            "Nature Walks", "Board Games",
-            "Campfires", "Story Telling"
-          ].map((activity) => (
-            <div
-              key={activity}
-              className="bg-[#F2FCE2] p-4 rounded-lg shadow-sm"
-            >
-              <p className="font-medium text-[#7E69AB]">{activity}</p>
-            </div>
           ))}
         </div>
 
