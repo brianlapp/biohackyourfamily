@@ -40,6 +40,7 @@ const Index = () => {
       <RetreatInfo />
       <Activities />
       <AboutUs />
+      <Gallery />
       <BookingSection />
       <Contact />
     </div>
