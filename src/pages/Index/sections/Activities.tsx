@@ -18,36 +18,36 @@ const Activities = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {/* Weekend Retreat Package */}
-          <div className="bg-[#F2FCE2] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[rgb(79,30,114)]">Weekend Retreat with Cabin Experience</h3>
-            <p className="text-red-600 font-medium mb-4">Limited cabins available!</p>
+          <div className="bg-[#9b87f5]/10 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-[#9b87f5]/20">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">Weekend Retreat with Cabin Experience</h3>
+            <p className="text-[#9b87f5] font-medium mb-4">Limited cabins available!</p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>2 nights in a heated cabin (up to 2 adults and 2 children)</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>2 dinners, 1 lunch, 2 breakfasts, snacks & unlimited warm beverages</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Arrival Welcome Package</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Indoor workshops including all supplies</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Family cooking class</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Planned outdoor activities</span>
               </li>
             </ul>
-            <p className="text-sm mb-6">
+            <p className="text-sm mb-6 text-gray-600">
               Heated cabin includes sleeping accommodations with mattresses (bring your own sleeping bags),
               table with 4 chairs, cooking accessories, gas BBQ, outdoor picnic table with campfire pit.
               Heated private showers and washrooms available.
@@ -55,7 +55,7 @@ const Activities = () => {
             <div className="text-center">
               <a
                 href="#booking"
-                className="inline-block bg-[rgb(79,30,114)] text-white px-8 py-3 rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
+                className="inline-block bg-[#7E69AB] text-white px-8 py-3 rounded-lg hover:bg-[#7E69AB]/90 transition-all"
               >
                 Book Weekend Package
               </a>
@@ -63,43 +63,43 @@ const Activities = () => {
           </div>
 
           {/* One Day Retreat Package */}
-          <div className="bg-[#E5DEFF] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[rgb(79,30,114)]">1 Full Day Retreat</h3>
-            <p className="text-green-600 font-medium mb-4">Perfect for day visitors!</p>
+          <div className="bg-[#D6BCFA]/20 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-[#D6BCFA]/30">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#7E69AB]">1 Full Day Retreat</h3>
+            <p className="text-[#9b87f5] font-medium mb-4">Perfect for day visitors!</p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Full day of indoor workshops</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Outdoor activities</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Family cooking class</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Lunch and dinner included</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Unlimited warm beverages</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-2">•</span>
+                <span className="mr-2 text-[#7E69AB]">•</span>
                 <span>Evening campfire access</span>
               </li>
             </ul>
-            <p className="text-sm mb-6">
+            <p className="text-sm mb-6 text-gray-600">
               Join us for a full day of activities and workshops without the overnight stay.
               Perfect for those who want to experience the retreat atmosphere while returning home in the evening.
             </p>
             <div className="text-center">
               <a
                 href="#booking"
-                className="inline-block bg-[rgb(79,30,114)] text-white px-8 py-3 rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
+                className="inline-block bg-[#7E69AB] text-white px-8 py-3 rounded-lg hover:bg-[#7E69AB]/90 transition-all"
               >
                 Book Day Package
               </a>
@@ -116,9 +116,9 @@ const Activities = () => {
           ].map((activity) => (
             <div
               key={activity}
-              className="bg-[#F2FCE2] p-4 rounded-lg shadow-sm"
+              className="bg-[#E5DEFF] p-4 rounded-lg shadow-sm"
             >
-              <p className="font-medium">{activity}</p>
+              <p className="font-medium text-[#7E69AB]">{activity}</p>
             </div>
           ))}
         </div>
@@ -126,7 +126,7 @@ const Activities = () => {
         <div className="flex justify-center">
           <a
             href="#booking"
-            className="inline-block bg-[rgb(79,30,114)] text-white px-8 py-3 text-lg rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
+            className="inline-block bg-[#7E69AB] text-white px-8 py-3 text-lg rounded-lg hover:bg-[#7E69AB]/90 transition-all"
           >
             Join Our Next Retreat
           </a>
