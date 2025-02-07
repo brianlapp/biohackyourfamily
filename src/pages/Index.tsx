@@ -80,7 +80,8 @@ const Index = () => {
         <div className="container px-4 sm:px-6">
           <div className="text-center mb-8 md:mb-12 scroll-animate">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Bringing Back the 80's! Unplug with your family!
+              Bringing Back the 80's! Unplug with your family!<br />
+              <span className="text-xl md:text-2xl mt-2 block">Screen Detox Family Weekend Retreat</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
               Mar 14, 2025, 6:00 p.m. at Camp Henry
