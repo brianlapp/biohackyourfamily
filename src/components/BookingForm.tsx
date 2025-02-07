@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -29,35 +28,31 @@ const BookingForm = () => {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
-      // Add form-name field for Netlify
-      const payload = {
-        'form-name': 'booking',
-        ...data
-      };
-
-      // Changed the fetch URL to match Netlify's form submission endpoint
-      const response = await fetch('/.netlify/functions/submission-created', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           'Accept': 'application/json'
         },
-        body: encode(payload)
+        body: encode({
+          'form-name': 'booking',
+          ...data
+        })
       });
 
       console.log('Form submission response:', response);
 
-      if (!response.ok) {
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Your booking request has been submitted. We'll be in touch soon!",
+          duration: 5000,
+        });
+
+        form.reset();
+      } else {
         throw new Error(`Form submission failed with status: ${response.status}`);
       }
-
-      toast({
-        title: "Success!",
-        description: "Your booking request has been submitted. We'll be in touch soon!",
-        duration: 5000,
-      });
-
-      form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
