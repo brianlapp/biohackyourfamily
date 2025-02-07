@@ -39,9 +39,8 @@ const Index = () => {
       <Hero />
       <RetreatInfo />
       <Activities />
-      <AboutUs />
-      <Gallery />
       <BookingSection />
+      <Gallery />
       <Contact />
     </div>
   );
