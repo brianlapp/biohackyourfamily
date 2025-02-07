@@ -10,12 +10,6 @@ import {
   SelectValue,
 } from "./ui/select";
 
-// Extend form props to properly type Netlify attributes
-interface NetlifyFormProps extends React.FormHTMLAttributes<HTMLFormElement> {
-  'data-netlify'?: boolean;
-  'data-netlify-honeypot'?: string;
-}
-
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -29,40 +23,18 @@ const BookingForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const encode = (data: Record<string, string>) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formBody = encode({
-      'form-name': 'booking',
-      ...formData
-    });
-
-    console.log('Submitting form with data:', formBody);
-
     try {
-      // Target Netlify's form submission endpoint with the form name
-      const response = await fetch("/booking", {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json',
-          'Cache-Control': 'no-cache',
+      const response = await fetch("https://formspree.io/f/xkgozvwj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        body: formBody
+        body: JSON.stringify(formData),
       });
-
-      console.log('Response status:', response.status);
-      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
-      
-      const responseText = await response.text();
-      console.log('Response text:', responseText);
 
       if (response.ok) {
         toast({
@@ -80,18 +52,13 @@ const BookingForm = () => {
           comments: ''
         });
       } else {
-        throw new Error(`Form submission failed with status: ${response.status}`);
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      
-      // Try submitting the form directly as a fallback
-      const formElement = e.target as HTMLFormElement;
-      formElement.submit();
-      
       toast({
         title: "Error",
-        description: "There was a problem submitting your booking. The form will try to submit directly.",
+        description: "There was a problem submitting your booking. Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -99,22 +66,8 @@ const BookingForm = () => {
     }
   };
 
-  const formProps: NetlifyFormProps = {
-    name: "booking",
-    method: "POST",
-    'data-netlify': true,
-    'data-netlify-honeypot': "bot-field",
-    className: "space-y-6 max-w-md mx-auto",
-    onSubmit: handleSubmit
-  };
-
   return (
-    <form {...formProps}>
-      <input type="hidden" name="form-name" value="booking" />
-      <div hidden>
-        <input name="bot-field" />
-      </div>
-      
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
       <div className="space-y-2">
         <label htmlFor="firstName" className="block text-sm font-medium">
           First Name
