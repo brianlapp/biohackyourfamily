@@ -22,12 +22,20 @@ const BookingForm = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
 
-      // For Netlify form submission
-      fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json"
+        },
         body: new URLSearchParams(formData as any).toString(),
       });
+
+      console.log('Form submission response:', response);
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status: ${response.status}`);
+      }
 
       toast({
         title: "Success!",
@@ -37,6 +45,7 @@ const BookingForm = () => {
 
       form.reset();
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "There was a problem submitting your booking. Please try again.",
