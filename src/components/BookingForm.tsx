@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -38,17 +39,28 @@ const BookingForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const formBody = encode({
+      'form-name': 'booking',
+      ...formData
+    });
+
+    console.log('Submitting form with data:', formBody);
+
     try {
       const response = await fetch("/", {
         method: 'POST',
         headers: { 
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
         },
-        body: encode({
-          'form-name': 'booking',
-          ...formData
-        })
+        body: formBody
       });
+
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+      
+      const responseText = await response.text();
+      console.log('Response text:', responseText);
 
       if (response.ok) {
         toast({
@@ -70,9 +82,14 @@ const BookingForm = () => {
       }
     } catch (error) {
       console.error('Form submission error:', error);
+      
+      // Try submitting the form directly as a fallback
+      const formElement = e.target as HTMLFormElement;
+      formElement.submit();
+      
       toast({
         title: "Error",
-        description: "There was a problem submitting your booking. Please try again.",
+        description: "There was a problem submitting your booking. The form will try to submit directly.",
         variant: "destructive",
       });
     } finally {
