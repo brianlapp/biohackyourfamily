@@ -52,10 +52,9 @@ const Index = () => {
         <meta name="keywords" content="Cabin camping, Family Bonding, Digital Detox, Screen Detox, Mental Health, Life Skills, Youth, Teens, Seniors, Parents, Homeschooling, Meditation, Story Telling, Biohacking, Holistic Wellness, Windsor-Essex County, Point Pelee National Park, Southern Ontario" />
       </Helmet>
 
-      {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
           <img
             src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png"
             alt="A person sitting with a lantern in the dark, creating a cozy camping atmosphere"
@@ -77,7 +76,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Event Details Section */}
       <section className="py-12 md:py-20 bg-secondary">
         <div className="container px-4 sm:px-6">
           <div className="text-center mb-8 md:mb-12 scroll-animate">
@@ -115,7 +113,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-12 md:py-20">
         <div className="container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center scroll-animate">
@@ -127,12 +124,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Activities Section */}
-      <section ref={activitiesRef} className="py-12 md:py-20 bg-[#F2FCE2]">
+      <section className="py-12 md:py-20 bg-[#F2FCE2]">
         <div className="container px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What to Expect</h2>
           
-          {/* Activities Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
             {[
               "Family Bonding", "Outdoor Activities",
@@ -149,7 +144,6 @@ const Index = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="flex justify-center mb-12">
             <a
               href="#booking"
@@ -159,7 +153,6 @@ const Index = () => {
             </a>
           </div>
 
-          {/* Photo Gallery */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 scroll-animate">
             {galleryImages.map((image, index) => (
               <div 
@@ -180,7 +173,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Booking Form Section */}
       <section id="booking" className="py-12 md:py-20">
         <div className="container px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Book Your Spot</h2>
@@ -188,7 +180,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-12 md:py-20 bg-secondary">
         <div className="container px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center space-y-6 md:space-y-8">
