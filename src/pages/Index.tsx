@@ -57,8 +57,8 @@ const Index = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <img
-            src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
-            alt="Hero background"
+            src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png"
+            alt="A person sitting with a lantern in the dark, creating a cozy camping atmosphere"
             className="w-full h-full object-cover"
           />
         </div>
