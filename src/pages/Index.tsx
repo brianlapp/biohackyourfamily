@@ -150,6 +150,16 @@ const Index = () => {
             ))}
           </div>
 
+          {/* CTA Button */}
+          <div className="flex justify-center mb-12">
+            <a
+              href="#booking"
+              className="inline-block bg-[rgb(79,30,114)] text-white px-8 py-3 text-lg rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
+            >
+              Join Our Next Retreat
+            </a>
+          </div>
+
           {/* Photo Gallery */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 scroll-animate">
             {galleryImages.map((image, index) => (
