@@ -70,6 +70,22 @@ const BookingForm = () => {
     }
   };
 
+  // This is a static form that Netlify will detect during build
+  if (typeof window === 'undefined') {
+    return (
+      <form name="booking" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="booking" />
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="text" name="retreatType" />
+        <input type="number" name="adults" />
+        <input type="number" name="kids" />
+        <input type="email" name="email" />
+        <textarea name="comments"></textarea>
+      </form>
+    );
+  }
+
   return (
     <form
       name="booking"
