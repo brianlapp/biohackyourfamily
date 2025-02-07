@@ -11,10 +11,19 @@ import {
 } from "./ui/select";
 
 const BookingForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    retreatType: '',
+    adults: '',
+    kids: '',
+    email: '',
+    comments: ''
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const encode = (data: any) => {
+  const encode = (data: Record<string, string>) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
@@ -25,25 +34,16 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     try {
-      const form = e.currentTarget;
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-
-      console.log('Form data being submitted:', data);
-
-      const body = encode({
-        'form-name': 'booking',
-        ...data
-      });
-
-      console.log('Encoded form data:', body);
-
       const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
         },
-        body
+        body: encode({
+          'form-name': 'booking',
+          ...formData
+        })
       });
 
       console.log('Form submission response:', response);
@@ -54,7 +54,15 @@ const BookingForm = () => {
           description: "Your booking request has been submitted. We'll be in touch soon!",
           duration: 5000,
         });
-        form.reset();
+        setFormData({
+          firstName: '',
+          lastName: '',
+          retreatType: '',
+          adults: '',
+          kids: '',
+          email: '',
+          comments: ''
+        });
       } else {
         throw new Error(`Form submission failed with status: ${response.status}`);
       }
@@ -108,6 +116,8 @@ const BookingForm = () => {
           type="text"
           name="firstName"
           id="firstName"
+          value={formData.firstName}
+          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
@@ -121,6 +131,8 @@ const BookingForm = () => {
           type="text"
           name="lastName"
           id="lastName"
+          value={formData.lastName}
+          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
@@ -130,7 +142,11 @@ const BookingForm = () => {
         <label htmlFor="retreatType" className="block text-sm font-medium">
           Retreat Type
         </label>
-        <Select name="retreatType">
+        <Select 
+          name="retreatType"
+          value={formData.retreatType}
+          onValueChange={(value) => setFormData({ ...formData, retreatType: value })}
+        >
           <SelectTrigger className="w-full">
             <SelectValue placeholder="Select retreat type" />
           </SelectTrigger>
@@ -150,6 +166,8 @@ const BookingForm = () => {
           name="adults"
           id="adults"
           min="1"
+          value={formData.adults}
+          onChange={(e) => setFormData({ ...formData, adults: e.target.value })}
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
@@ -164,6 +182,8 @@ const BookingForm = () => {
           name="kids"
           id="kids"
           min="0"
+          value={formData.kids}
+          onChange={(e) => setFormData({ ...formData, kids: e.target.value })}
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
@@ -177,6 +197,8 @@ const BookingForm = () => {
           type="email"
           name="email"
           id="email"
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
@@ -190,6 +212,8 @@ const BookingForm = () => {
           name="comments"
           id="comments"
           rows={4}
+          value={formData.comments}
+          onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         ></textarea>
       </div>
