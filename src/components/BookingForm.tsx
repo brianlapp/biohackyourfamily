@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -29,15 +28,13 @@ const BookingForm = () => {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
-      // Log form data for debugging
       console.log('Form data being submitted:', data);
 
       const body = encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': 'booking',
         ...data
       });
 
-      // Log encoded body
       console.log('Encoded form data:', body);
 
       const response = await fetch('/', {
@@ -48,7 +45,6 @@ const BookingForm = () => {
         body
       });
 
-      // Log response for debugging
       console.log('Form submission response:', response);
 
       if (response.ok) {
@@ -75,16 +71,14 @@ const BookingForm = () => {
 
   return (
     <form
-      name="booking-form"
+      name="booking"
       method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      action="/"
+      netlify="true"
+      netlify-honeypot="bot-field"
       className="space-y-6 max-w-md mx-auto"
       onSubmit={handleSubmit}
     >
-      {/* These hidden inputs are required for Netlify forms */}
-      <input type="hidden" name="form-name" value="booking-form" />
+      <input type="hidden" name="form-name" value="booking" />
       <div hidden>
         <input name="bot-field" />
       </div>
