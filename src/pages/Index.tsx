@@ -99,7 +99,7 @@ const Index = () => {
               <div className="flex justify-center md:justify-start">
                 <a
                   href="#booking"
-                  className="inline-block bg-primary text-white px-10 py-4 text-lg rounded-lg hover:bg-primary/90 transition-all"
+                  className="inline-block bg-[rgb(79,30,114)] text-white px-10 py-4 text-lg rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
                 >
                   Register Now
                 </a>
