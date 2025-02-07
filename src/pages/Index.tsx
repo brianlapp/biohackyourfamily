@@ -132,22 +132,6 @@ const Index = () => {
             <p>
               Nourishing, simple meals will be offered, but for those spending the weekend in their own cabin, you will have access to your own BBQ and your personal campfire pit with a handful of cooking utensils to cater to any further culinary family needs. For those joining for the 1 day pass on Saturday, lunch and dinner will be included.
             </p>
-
-            <div className="mt-8 space-y-4">
-              <h3 className="text-xl md:text-2xl font-semibold">Schedule</h3>
-              <div className="space-y-4">
-                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                  <div className="font-medium">4:30 p.m. - 6:00 p.m.</div>
-                  <div className="text-muted-foreground">(1 hour 30 minutes)</div>
-                  <div>Check into your cabin and unpack</div>
-                </div>
-                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                  <div className="font-medium">6:00 p.m. - 7:00 p.m.</div>
-                  <div className="text-muted-foreground">(1 hour)</div>
-                  <div>Self-serve Dinner at Retreat Center</div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
