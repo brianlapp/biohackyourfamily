@@ -31,7 +31,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-primary to-white">
         <div className="absolute inset-0">
           <img
-            src="https://static.wixstatic.com/media/aac7344b980d4e0eb6353b1304f5ebd0.jpg/v1/fill/w_2380,h_1854,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/aac7344b980d4e0eb6353b1304f5ebd0.jpg"
+            src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
             alt="Hero background"
             className="w-full h-full object-cover opacity-20"
           />
