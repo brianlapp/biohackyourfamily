@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import CountdownTimer from '../components/CountdownTimer';
 import BookingForm from '../components/BookingForm';
@@ -69,7 +68,7 @@ const Index = () => {
             className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-6 md:mb-8 animate-fade-in"
           />
           <h1 className="text-3xl md:text-6xl font-bold mb-4 animate-fade-up text-white leading-tight">
-            Bringing back the 80's!<br />Unplug with your family!
+            Elevating your family&nbsp;life,<br />one experience at a&nbsp;time.
           </h1>
           <p className="inline-block bg-[#F97316] px-4 py-2 rounded-full text-lg md:text-xl mb-8 animate-fade-up text-secondary-foreground whitespace-nowrap">
             EXPLORE WELLNESS at Our Retreats
@@ -81,7 +80,7 @@ const Index = () => {
         <div className="container px-4 sm:px-6">
           <div className="text-center mb-8 md:mb-12 scroll-animate">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Bringing Back the 80's - Screen Detox Family Weekend Retreat
+              Bringing Back the 80's! Unplug with your family!
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
               Mar 14, 2025, 6:00 p.m. at Camp Henry
