@@ -63,35 +63,35 @@ const Index = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 text-center px-4 sm:px-6">
           <img
             src="https://static.wixstatic.com/media/7f2eb6_cd793477863a4f3a8b17fcabe8cfb8f2~mv2.png/v1/fill/w_590,h_484,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7f2eb6_cd793477863a4f3a8b17fcabe8cfb8f2~mv2.png"
             alt="Logo"
-            className="w-40 h-40 mx-auto mb-8 animate-fade-in"
+            className="w-32 md:w-40 h-32 md:h-40 mx-auto mb-6 md:mb-8 animate-fade-in"
           />
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up text-white">
+          <h1 className="text-3xl md:text-6xl font-bold mb-4 animate-fade-up text-white leading-tight">
             Elevating your family life,<br />one experience at a time.
           </h1>
-          <p className="inline-block bg-[#F97316] px-4 py-2 rounded-full text-xl mb-8 animate-fade-up text-secondary-foreground">
+          <p className="inline-block bg-[#F97316] px-4 py-2 rounded-full text-lg md:text-xl mb-8 animate-fade-up text-secondary-foreground whitespace-nowrap">
             EXPLORE WELLNESS at Our Retreats
           </p>
         </div>
       </section>
 
       {/* Event Details Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="text-center mb-12 scroll-animate">
-            <h2 className="text-3xl font-bold mb-4">
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container px-4 sm:px-6">
+          <div className="text-center mb-8 md:mb-12 scroll-animate">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Bringing Back the 80's - Screen Detox Family Weekend Retreat
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base md:text-lg text-muted-foreground">
               Mar 14, 2025, 6:00 p.m. at Camp Henry
             </p>
             <CountdownTimer />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="scroll-animate h-[320px]">
               <img
                 src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
@@ -99,14 +99,14 @@ const Index = () => {
                 className="rounded-lg shadow-lg w-full h-full object-cover"
               />
             </div>
-            <div className="space-y-6 scroll-animate">
-              <p className="text-lg">
+            <div className="space-y-4 md:space-y-6 scroll-animate">
+              <p className="text-base md:text-lg">
                 Join us for a transformative weekend retreat focused on reconnecting with family without the digital distractions. With both fresh air outdoor activities and indoor workshops to keep all ages busy, you'll go home rested with stories to share and remember.
               </p>
               <div className="flex justify-center md:justify-start">
                 <a
                   href="#booking"
-                  className="inline-block bg-[rgb(79,30,114)] text-white px-10 py-4 text-lg rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
+                  className="inline-block bg-[rgb(79,30,114)] text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg hover:bg-[rgb(79,30,114)]/90 transition-all"
                 >
                   Register Now
                 </a>
@@ -117,11 +117,11 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20">
-        <div className="container">
+      <section className="py-12 md:py-20">
+        <div className="container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center scroll-animate">
-            <h2 className="text-3xl font-bold mb-8">About Us</h2>
-            <p className="text-lg mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">About Us</h2>
+            <p className="text-base md:text-lg mb-6 md:mb-8">
               After over 25 years of acquiring experiences around the globe, in the ocean, up the mountains, deep in the forests, on organic farms, immersing across Europe, Asia and South America, with a collection of modalities to offer you a taste to escape in your own mini adventure on one of our upcoming workshops or retreats!
             </p>
           </div>
@@ -129,12 +129,12 @@ const Index = () => {
       </section>
 
       {/* Activities Section */}
-      <section ref={activitiesRef} className="py-20 bg-[#F2FCE2]">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">What to Expect</h2>
+      <section ref={activitiesRef} className="py-12 md:py-20 bg-[#F2FCE2]">
+        <div className="container px-4 sm:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What to Expect</h2>
           
           {/* Activities Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-12 scroll-animate">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
             {[
               "Family Bonding", "Outdoor Activities",
               "Digital Detox", "Wellness Workshops",
@@ -151,7 +151,7 @@ const Index = () => {
           </div>
 
           {/* Photo Gallery */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 scroll-animate">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 scroll-animate">
             {galleryImages.map((image, index) => (
               <div 
                 key={index}
@@ -160,7 +160,7 @@ const Index = () => {
                 <img
                   src={image.url}
                   alt={image.alt}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-48 md:h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <p className="text-white text-center px-4">{image.alt}</p>
@@ -172,24 +172,24 @@ const Index = () => {
       </section>
 
       {/* Booking Form Section */}
-      <section id="booking" className="py-20">
-        <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Book Your Spot</h2>
+      <section id="booking" className="py-12 md:py-20">
+        <div className="container px-4 sm:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Book Your Spot</h2>
           <BookingForm />
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container px-4 sm:px-6">
+          <div className="max-w-2xl mx-auto text-center space-y-6 md:space-y-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Get in Touch</h2>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
               <a href="tel:226-246-7411" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone size={20} />
                 <span>226-246-7411</span>
               </a>
-              <a href="mailto:BioHackYourFamily@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="mailto:BioHackYourFamily@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors break-all md:break-normal">
                 <Mail size={20} />
                 <span>BioHackYourFamily@gmail.com</span>
               </a>
