@@ -58,7 +58,7 @@ const BookingForm = () => {
           <SelectTrigger className="w-full">
             <SelectValue placeholder="Select retreat type" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-white">
             <SelectItem value="weekend">Weekend Cabin</SelectItem>
             <SelectItem value="oneday">1 Day Retreat</SelectItem>
           </SelectContent>
