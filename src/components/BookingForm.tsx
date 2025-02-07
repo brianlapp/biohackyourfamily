@@ -72,7 +72,7 @@ const BookingForm = () => {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary hover:bg-primary/90 text-white transition-all"
+        className="w-full bg-primary hover:bg-primary/90 text-white transition-all text-lg py-6"
       >
         {isSubmitting ? "Submitting..." : "Register Now"}
       </Button>

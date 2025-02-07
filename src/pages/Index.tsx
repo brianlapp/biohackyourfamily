@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import CountdownTimer from '../components/CountdownTimer';
 import BookingForm from '../components/BookingForm';
@@ -64,7 +65,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up text-white">
             Elevating your family life,<br />one experience at a time.
           </h1>
-          <p className="text-xl mb-8 animate-fade-up text-white">
+          <p className="inline-block bg-secondary px-4 py-2 rounded-full text-xl mb-8 animate-fade-up text-secondary-foreground">
             EXPLORE WELLNESS at Our Retreats
           </p>
         </div>
@@ -98,7 +99,7 @@ const Index = () => {
               <div className="flex justify-center md:justify-start">
                 <a
                   href="#booking"
-                  className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-all"
+                  className="inline-block bg-primary text-white px-10 py-4 text-lg rounded-lg hover:bg-primary/90 transition-all"
                 >
                   Register Now
                 </a>
