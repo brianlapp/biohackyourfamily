@@ -130,6 +130,37 @@ const Index = () => {
         <div className="container px-4 sm:px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">What to Expect</h2>
           
+          <div className="max-w-4xl mx-auto mb-12 space-y-6 text-base md:text-lg">
+            <p>
+              Time to unwind, rest and relax with your family while enriching the weekend experience with ample fresh air, nature walks, old fashioned activities like cooking with the kids, nature crafts, board games, music circles, time out to nap or read or stretch by the lake and of course campfires.
+            </p>
+            <p>
+              Open for all ages, no strict attendance, participate in your chosen interests and relax on your own if you need a break. It's time to show our kids how we grew up, lots of laughter and play without the digital distractions.
+            </p>
+            <p>
+              There will be a special workshop on discovering, sharing and setting your family values and goals, helping to deepen the bond among your most cherished loved ones.
+            </p>
+            <p>
+              Nourishing, simple meals will be offered, but for those spending the weekend in their own cabin, you will have access to your own BBQ and your personal campfire pit with a handful of cooking utensils to cater to any further culinary family needs. For those joining for the 1 day pass on Saturday, lunch and dinner will be included.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              <h3 className="text-xl md:text-2xl font-semibold">Schedule</h3>
+              <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                  <div className="font-medium">4:30 p.m. - 6:00 p.m.</div>
+                  <div className="text-muted-foreground">(1 hour 30 minutes)</div>
+                  <div>Check into your cabin and unpack</div>
+                </div>
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                  <div className="font-medium">6:00 p.m. - 7:00 p.m.</div>
+                  <div className="text-muted-foreground">(1 hour)</div>
+                  <div>Self-serve Dinner at Retreat Center</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
             {[
               "Family Bonding", "Outdoor Activities",
