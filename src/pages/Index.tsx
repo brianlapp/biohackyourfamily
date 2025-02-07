@@ -1,12 +1,158 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect, useRef } from 'react';
+import CountdownTimer from '../components/CountdownTimer';
+import BookingForm from '../components/BookingForm';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Index = () => {
+  const activitiesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.scroll-animate');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-primary to-white">
+        <div className="absolute inset-0">
+          <img
+            src="https://static.wixstatic.com/media/aac7344b980d4e0eb6353b1304f5ebd0.jpg/v1/fill/w_2380,h_1854,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/aac7344b980d4e0eb6353b1304f5ebd0.jpg"
+            alt="Hero background"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="container relative z-10 text-center">
+          <img
+            src="https://static.wixstatic.com/media/7f2eb6_cd793477863a4f3a8b17fcabe8cfb8f2~mv2.png/v1/fill/w_590,h_484,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7f2eb6_cd793477863a4f3a8b17fcabe8cfb8f2~mv2.png"
+            alt="Logo"
+            className="w-40 h-40 mx-auto mb-8 animate-fade-in"
+          />
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up">
+            Elevating your family life,<br />one experience at a time.
+          </h1>
+          <p className="text-xl mb-8 animate-fade-up">
+            EXPLORE WELLNESS at Our Retreats
+          </p>
+        </div>
+      </section>
+
+      {/* Event Details Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="text-center mb-12 scroll-animate">
+            <h2 className="text-3xl font-bold mb-4">
+              Screen Detox Family Weekend Retreat - Bringing Back the 80's
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Mar 14, 2025, 6:00 p.m. at Camp Henry
+            </p>
+            <CountdownTimer />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="scroll-animate">
+              <img
+                src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
+                alt="Retreat activities"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="space-y-6 scroll-animate">
+              <p className="text-lg">
+                Join us for a transformative weekend retreat focused on reconnecting with family without the digital distractions. With both fresh air outdoor activities and indoor workshops to keep all ages busy, you'll go home rested with stories to share and remember.
+              </p>
+              <div className="flex justify-center md:justify-start">
+                <a
+                  href="#booking"
+                  className="inline-block bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-all"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center scroll-animate">
+            <h2 className="text-3xl font-bold mb-8">About Us</h2>
+            <p className="text-lg mb-8">
+              After over 25 years of acquiring experiences around the globe, in the ocean, up the mountains, deep in the forests, on organic farms, immersing across Europe, Asia and South America, with a collection of modalities to offer you a taste to escape in your own mini adventure on one of our upcoming workshops or retreats!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Activities Section */}
+      <section ref={activitiesRef} className="py-20 bg-muted">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-12">What to Expect</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto scroll-animate">
+            {[
+              "Family Bonding", "Outdoor Activities",
+              "Digital Detox", "Wellness Workshops",
+              "Nature Walks", "Board Games",
+              "Campfires", "Story Telling"
+            ].map((activity) => (
+              <div
+                key={activity}
+                className="bg-white p-4 rounded-lg shadow-sm"
+              >
+                <p className="font-medium">{activity}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Form Section */}
+      <section id="booking" className="py-20">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-12">Book Your Spot</h2>
+          <BookingForm />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+              <a href="tel:226-246-7411" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Phone size={20} />
+                <span>226-246-7411</span>
+              </a>
+              <a href="mailto:BioHackYourFamily@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Mail size={20} />
+                <span>BioHackYourFamily@gmail.com</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <MapPin size={20} />
+                <span>Windsor - Essex County</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
