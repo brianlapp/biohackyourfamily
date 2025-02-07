@@ -30,19 +30,19 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#FDE1D3',
+          DEFAULT: '#F2FCE2', // Soft Green
           foreground: '#1A1F2C',
         },
         secondary: {
-          DEFAULT: '#E5DEFF',
+          DEFAULT: '#FEC6A1', // Soft Orange
           foreground: '#1A1F2C',
         },
         accent: {
-          DEFAULT: '#8B5CF6',
+          DEFAULT: '#0EA5E9', // Ocean Blue for CTA
           foreground: '#FFFFFF',
         },
         muted: {
-          DEFAULT: '#F1F0FB',
+          DEFAULT: '#FEF7CD', // Soft Yellow
           foreground: '#6E59A5',
         },
       },
