@@ -65,7 +65,7 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up text-white">
             Elevating your family life,<br />one experience at a time.
           </h1>
-          <p className="inline-block bg-secondary px-4 py-2 rounded-full text-xl mb-8 animate-fade-up text-secondary-foreground">
+          <p className="inline-block bg-[#F97316] px-4 py-2 rounded-full text-xl mb-8 animate-fade-up text-secondary-foreground">
             EXPLORE WELLNESS at Our Retreats
           </p>
         </div>
