@@ -136,14 +136,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto mb-8 md:mb-12 scroll-animate">
             {[
-              "Family Bonding", "Outdoor Activities",
+              "Family Cooking", "Outdoor Activities",
               "Digital Detox", "Wellness Workshops",
               "Nature Walks", "Board Games",
               "Campfires", "Story Telling"
             ].map((activity) => (
               <div
                 key={activity}
-                className="bg-white p-4 rounded-lg shadow-sm"
+                className="bg-[#F2FCE2] p-4 rounded-lg shadow-sm"
               >
                 <p className="font-medium">{activity}</p>
               </div>
