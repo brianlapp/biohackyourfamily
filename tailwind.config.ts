@@ -37,10 +37,6 @@ export default {
           DEFAULT: '#FEC6A1', // Soft Orange
           foreground: '#1A1F2C',
         },
-        accent: {
-          DEFAULT: '#2196F3', // Blue for CTA
-          foreground: '#FFFFFF',
-        },
       },
       keyframes: {
         "fade-up": {
@@ -70,4 +66,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-

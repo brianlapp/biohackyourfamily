@@ -47,12 +47,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-primary to-white">
+      <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black opacity-70"></div>
           <img
             src="https://static.wixstatic.com/media/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg/v1/fill/w_2208,h_1289,al_c,q_90,enc_avif,quality_auto/11062b_880fd835b56744c6a0d43048a1de96f0~mv2_d_2208_1472_s_2.jpg"
             alt="Hero background"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="container relative z-10 text-center">
@@ -61,10 +62,10 @@ const Index = () => {
             alt="Logo"
             className="w-40 h-40 mx-auto mb-8 animate-fade-in"
           />
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-up text-white">
             Elevating your family life,<br />one experience at a time.
           </h1>
-          <p className="text-xl mb-8 animate-fade-up">
+          <p className="text-xl mb-8 animate-fade-up text-white">
             EXPLORE WELLNESS at Our Retreats
           </p>
         </div>
@@ -75,7 +76,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-12 scroll-animate">
             <h2 className="text-3xl font-bold mb-4">
-              Screen Detox Family Weekend Retreat - Bringing Back the 80's
+              Bringing Back the 80's - Screen Detox Family Weekend Retreat
             </h2>
             <p className="text-lg text-muted-foreground">
               Mar 14, 2025, 6:00 p.m. at Camp Henry
@@ -98,7 +99,7 @@ const Index = () => {
               <div className="flex justify-center md:justify-start">
                 <a
                   href="#booking"
-                  className="inline-block bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-all"
+                  className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-all"
                 >
                   Register Now
                 </a>
