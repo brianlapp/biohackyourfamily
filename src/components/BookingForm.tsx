@@ -47,11 +47,13 @@ const BookingForm = () => {
     console.log('Submitting form with data:', formBody);
 
     try {
-      const response = await fetch("/", {
+      // Target Netlify's form handler with cache-busting
+      const response = await fetch("/?no-cache=1", {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'Cache-Control': 'no-cache',
         },
         body: formBody
       });
