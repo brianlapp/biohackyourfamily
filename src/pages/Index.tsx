@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import CountdownTimer from '../components/CountdownTimer';
 import BookingForm from '../components/BookingForm';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const Index = () => {
   const activitiesRef = useRef<HTMLDivElement>(null);
@@ -46,6 +47,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Family Detox Adventure - Screen Detox Family Weekend Retreat</title>
+        <meta name="description" content="Join our transformative family retreat featuring cabin camping, family bonding, digital detox, and holistic wellness activities. Experience nature walks, meditation, yoga, and more in Windsor-Essex County, Point Pelee National Park. Perfect for families, teens, seniors, and homeschooling groups." />
+        <meta name="keywords" content="Cabin camping, Family Bonding, Digital Detox, Screen Detox, Mental Health, Life Skills, Youth, Teens, Seniors, Parents, Homeschooling, Meditation, Story Telling, Biohacking, Holistic Wellness, Windsor-Essex County, Point Pelee National Park, Southern Ontario" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
