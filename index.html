@@ -11,9 +11,20 @@
   </head>
 
   <body>
+    <!-- Netlify Form Detection - This form is hidden and only used for Netlify's form detection -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="booking" />
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="text" name="retreatType" />
+      <input type="number" name="adults" />
+      <input type="number" name="kids" />
+      <input type="email" name="email" />
+      <textarea name="comments"></textarea>
+    </form>
+    
     <div id="root"></div>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

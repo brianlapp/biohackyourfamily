@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -40,7 +39,6 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit directly to Netlify's form handling endpoint
       const response = await fetch("/", {
         method: 'POST',
         headers: { 
@@ -81,29 +79,6 @@ const BookingForm = () => {
       setIsSubmitting(false);
     }
   };
-
-  // This is a static form that Netlify will detect during build
-  if (typeof window === 'undefined') {
-    const formProps: NetlifyFormProps = {
-      name: "booking",
-      'data-netlify': true,
-      'data-netlify-honeypot': "bot-field",
-      hidden: true
-    };
-
-    return (
-      <form {...formProps}>
-        <input type="hidden" name="form-name" value="booking" />
-        <input type="text" name="firstName" />
-        <input type="text" name="lastName" />
-        <input type="text" name="retreatType" />
-        <input type="number" name="adults" />
-        <input type="number" name="kids" />
-        <input type="email" name="email" />
-        <textarea name="comments"></textarea>
-      </form>
-    );
-  }
 
   const formProps: NetlifyFormProps = {
     name: "booking",
