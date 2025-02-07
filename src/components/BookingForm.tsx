@@ -26,7 +26,7 @@ const BookingForm = () => {
           name="name"
           id="name"
           required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
       </div>
 
@@ -39,7 +39,7 @@ const BookingForm = () => {
           name="email"
           id="email"
           required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
       </div>
 
@@ -53,7 +53,7 @@ const BookingForm = () => {
           id="participants"
           min="1"
           required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
       </div>
 
@@ -65,14 +65,14 @@ const BookingForm = () => {
           name="message"
           id="message"
           rows={4}
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         ></textarea>
       </div>
 
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-accent hover:bg-accent/90 text-white transition-all"
+        className="w-full bg-primary hover:bg-primary/90 text-white transition-all"
       >
         {isSubmitting ? "Submitting..." : "Register Now"}
       </Button>

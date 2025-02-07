@@ -178,11 +178,11 @@ const Index = () => {
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-              <a href="tel:226-246-7411" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="tel:226-246-7411" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone size={20} />
                 <span>226-246-7411</span>
               </a>
-              <a href="mailto:BioHackYourFamily@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="mailto:BioHackYourFamily@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail size={20} />
                 <span>BioHackYourFamily@gmail.com</span>
               </a>
