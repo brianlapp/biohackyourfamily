@@ -29,17 +29,26 @@ const BookingForm = () => {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
 
+      // Log form data for debugging
+      console.log('Form data being submitted:', data);
+
+      const body = encode({
+        'form-name': form.getAttribute('name'),
+        ...data
+      });
+
+      // Log encoded body
+      console.log('Encoded form data:', body);
+
       const response = await fetch('/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: encode({
-          'form-name': 'contact-form',
-          ...data
-        })
+        body
       });
 
+      // Log response for debugging
       console.log('Form submission response:', response);
 
       if (response.ok) {
@@ -66,19 +75,19 @@ const BookingForm = () => {
 
   return (
     <form
-      name="contact-form"
+      name="booking-form"
       method="POST"
       data-netlify="true"
-      netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
+      data-netlify-honeypot="bot-field"
+      action="/"
       className="space-y-6 max-w-md mx-auto"
+      onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact-form" />
-      <p className="hidden">
-        <label>
-          Don't fill this out if you're human: <input name="bot-field" />
-        </label>
-      </p>
+      {/* These hidden inputs are required for Netlify forms */}
+      <input type="hidden" name="form-name" value="booking-form" />
+      <div hidden>
+        <input name="bot-field" />
+      </div>
       
       <div className="space-y-2">
         <label htmlFor="firstName" className="block text-sm font-medium">
@@ -186,4 +195,3 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
-
