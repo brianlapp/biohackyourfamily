@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -73,8 +74,8 @@ const BookingForm = () => {
     <form
       name="booking"
       method="POST"
-      netlify="true"
-      netlify-honeypot="bot-field"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
       className="space-y-6 max-w-md mx-auto"
       onSubmit={handleSubmit}
     >
