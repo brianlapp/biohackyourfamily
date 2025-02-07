@@ -71,7 +71,7 @@ const Index = () => {
           <h1 className="text-3xl md:text-6xl font-bold mb-4 animate-fade-up text-white leading-tight">
             Elevating your family&nbsp;life,<br />one experience at a&nbsp;time.
           </h1>
-          <p className="inline-block bg-[#9b87f5] text-white px-4 py-2 rounded-full text-lg md:text-xl mb-8 animate-fade-up whitespace-nowrap">
+          <p className="inline-block bg-[rgb(79,30,114)] text-white px-4 py-2 rounded-full text-lg md:text-xl mb-8 animate-fade-up whitespace-nowrap">
             EXPLORE WELLNESS at Our Retreats
           </p>
         </div>
