@@ -79,8 +79,9 @@ const Index = () => {
       <section className="py-12 md:py-20 bg-secondary">
         <div className="container px-4 sm:px-6">
           <div className="text-center mb-8 md:mb-12 scroll-animate">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Bringing Back the 80's! Unplug with your family!<br />
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight">
+              Bringing Back<br />the 80's!<br />
+              Unplug with your family!<br />
               <span className="text-xl md:text-2xl mt-2 block">Screen Detox Family Weekend Retreat</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
