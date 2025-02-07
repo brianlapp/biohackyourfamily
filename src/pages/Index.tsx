@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import CountdownTimer from '../components/CountdownTimer';
 import BookingForm from '../components/BookingForm';
