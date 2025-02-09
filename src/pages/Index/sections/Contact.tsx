@@ -13,7 +13,7 @@ const Contact = () => {
               <span>Windsor - Essex County</span>
             </div>
             <div className="text-center">
-              <span>© BioHack Your Family 2025</span>
+              <span>© BioHack Your Family 2025. All Rights Reserved.</span>
             </div>
           </div>
         </div>
