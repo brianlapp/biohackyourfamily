@@ -6,10 +6,10 @@ const AboutUs = () => {
     <section className="py-12 md:py-20 bg-[#F2FCE2]">
       <div className="container px-4 sm:px-6">
         <div className="max-w-6xl mx-auto scroll-animate">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">About Us</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">About Me</h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-6 text-gray-700">
+          <div className="grid md:grid-cols-12 gap-8 items-start">
+            <div className="space-y-6 text-gray-700 md:col-span-7">
               <p className="text-base md:text-lg leading-relaxed">
                 A passionate traveler, lifelong learner, and dedicated mompreneur on a mission to help families reconnect in an increasingly digital world. With over 20 years in customer service management, event management, corporate training, and teaching both youth and adults, the journey has spanned diverse environments—from living in the jungle and on the beach to managing resorts and guiding international teens in European summer abroad camps.
               </p>
@@ -23,11 +23,11 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="relative grid grid-cols-2 gap-3 md:gap-4">
+            <div className="relative md:col-span-5">
               <img 
                 src="/lovable-uploads/76aaad3f-a5fc-484e-9501-adb47387c79b.png" 
                 alt="Collage of outdoor adventures and family activities"
-                className="col-span-2 w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
