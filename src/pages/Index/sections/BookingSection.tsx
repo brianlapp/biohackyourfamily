@@ -4,21 +4,28 @@ import BookingForm from '../../../components/BookingForm';
 
 const BookingSection = () => {
   return (
-    <section id="booking" className="py-12 md:py-20 bg-white">
+    <section id="booking" className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary">
-          Registration Form
-        </h2>
-        
-        <div className="max-w-3xl mx-auto mb-12">
-          <img 
-            src="https://static.wixstatic.com/media/7f2eb6_fe31e0d0bddc47dcacd51c60bc55f655~mv2.png/v1/fill/w_1231,h_2131,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/7f2eb6_fe31e0d0bddc47dcacd51c60bc55f655~mv2.png" 
-            alt="Registration form illustration" 
-            className="w-full h-auto max-h-[300px] object-cover object-center rounded-lg shadow-lg mx-auto"
-          />
-        </div>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-primary animate-fade-up">
+            Ready to Join Us?
+          </h2>
+          <p className="text-lg md:text-xl text-center mb-12 text-gray-600 animate-fade-up">
+            Register now to secure your spot in our transformative workshops and retreats
+          </p>
+          
+          <div className="mb-12 rounded-2xl overflow-hidden shadow-xl animate-fade-up">
+            <img 
+              src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png" 
+              alt="Registration banner" 
+              className="w-full h-[300px] object-cover"
+            />
+          </div>
 
-        <BookingForm />
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-fade-up">
+            <BookingForm />
+          </div>
+        </div>
       </div>
     </section>
   );

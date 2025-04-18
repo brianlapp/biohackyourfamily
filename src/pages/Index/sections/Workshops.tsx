@@ -1,10 +1,8 @@
-
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import React from 'react';
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock } from "lucide-react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface WorkshopItem {
   title: string;
@@ -85,22 +83,19 @@ const retreats: WorkshopItem[] = [
   }
 ];
 
-// This is the new workshop card component styled like the past events page
 const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  
   return (
-    <div className="group relative overflow-hidden rounded-lg border border-[#9b87f5]/20 bg-white shadow-lg transition-all hover:shadow-xl">
+    <div className="group relative overflow-hidden rounded-lg border border-[#35853d]/20 bg-white shadow-lg transition-all hover:shadow-xl">
       <div className="aspect-[4/3] w-full overflow-hidden">
         <img 
-          src="/lovable-uploads/b0b8adf0-0b94-4af4-b460-232735a103d9.png"
+          src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png"
           alt={workshop.title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
       <div className="p-6">
-        <Badge variant="secondary" className="mb-2 bg-[#9b87f5]/10 text-[#9b87f5]">Limited spots available!</Badge>
-        <h3 className="text-xl font-bold text-[#9b87f5] mb-4">{workshop.title}</h3>
+        <Badge variant="secondary" className="mb-2 bg-primary/10 text-primary">Limited spots available!</Badge>
+        <h3 className="text-xl font-bold text-primary mb-4">{workshop.title}</h3>
         
         <div className="flex flex-col gap-1.5 mt-2 mb-4">
           <div className="flex items-center">
@@ -118,23 +113,14 @@ const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
         </div>
         
         {workshop.description && (
-          <div className="mb-6">
-            <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-              <CollapsibleTrigger asChild>
-                <Button variant="ghost" className="text-sm p-0 h-auto">
-                  {isOpen ? "Read less" : "Read more"}
-                </Button>
-              </CollapsibleTrigger>
-              <CollapsibleContent className="mt-2 text-sm text-gray-600">
-                <p>{workshop.description}</p>
-              </CollapsibleContent>
-            </Collapsible>
+          <div className="mb-6 text-sm text-gray-600">
+            <p>{workshop.description}</p>
           </div>
         )}
         
         <div className="mt-auto">
           <a href="#booking">
-            <Button className="bg-[#9b87f5] hover:bg-[#9b87f5]/90 text-white">
+            <Button className="bg-primary hover:bg-primary/90 text-white">
               Register
             </Button>
           </a>
@@ -148,9 +134,18 @@ const Workshops = () => {
   return (
     <section id="workshops" className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-primary">
           Workshops & Retreats
         </h2>
+
+        <div className="max-w-4xl mx-auto mb-12 text-center">
+          <p className="text-lg text-gray-700">
+            Experience a transformative Family Retreat designed to strengthen bonds and promote holistic
+            family wellness. Unplug with your family and enjoy a digital detox weekend filled with activities
+            that bring back the simplicity of fresh air, family cooking, family goal planning, music circles,
+            campfires, hiking and more. Book now to elevate your family's wellness journey!
+          </p>
+        </div>
         
         <div className="mb-12">
           <h3 className="text-xl md:text-2xl font-semibold mb-6">Upcoming Spring, Summer, and Fall 2025 Workshops:</h3>
