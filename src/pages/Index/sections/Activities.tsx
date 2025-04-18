@@ -22,7 +22,7 @@ const Activities = () => {
         <Separator className="my-8 bg-primary/20 max-w-4xl mx-auto" />
 
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8">Spring Retreat Gallery</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">Winter Retreat Gallery</h3>
           <EventGallery />
         </div>
 
