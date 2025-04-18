@@ -22,22 +22,22 @@ const WhyBiohack = () => {
               Not too long ago, we recognized where the kids were playing by the voices of laughter outside, the pile of bicycles, cartoons came on Saturday mornings and somehow life was more balanced.
             </div>
             
-            <p>
+            <p className="mb-4">
               We had more REM sleep, more exercise, more fresh air and regular meal times undistracted by devices. Our future will be even more digitized, some have already created a smart hub under their roofs.
             </p>
             
             <ul className="space-y-2">
               <li className="flex items-start gap-2">
                 <CheckCircle2 size={20} className="text-primary mt-1 shrink-0" />
-                <span>Our dopamine and serotonin levels are irregulated</span>
+                <span className="font-semibold">Our dopamine and serotonin levels are irregulated</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 size={20} className="text-primary mt-1 shrink-0" />
-                <span>Free radicals are continuously being absorbed on a daily basis</span>
+                <span className="font-bold">Free radicals are continuously being absorbed on a daily basis</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 size={20} className="text-primary mt-1 shrink-0" />
-                <span>People have less time, more stress, even with all the technologies and screen support</span>
+                <span className="font-semibold">People have less time, more stress, even with all the technologies and screen support</span>
               </li>
             </ul>
           </div>
