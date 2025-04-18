@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Hero = () => {
   return <section className="relative h-screen flex items-center justify-center">
@@ -14,7 +15,7 @@ const Hero = () => {
           Discover upcoming workshops, day retreats, and personalized treatments focused on hacking your wellness journey for youth, teens, adults and seniors.
         </p>
         <div className="mt-6">
-          <a href="#booking" className="inline-block bg-amber-200 hover:bg-primary/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all">
+          <a href="#booking" className="inline-block bg-amber-200 hover:bg-primary/90 text-black px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl rounded-lg transition-all font-bold">
             Register Now
           </a>
         </div>
@@ -22,3 +23,4 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
+
