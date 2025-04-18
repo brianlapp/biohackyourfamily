@@ -67,6 +67,7 @@ const workshops: WorkshopItem[] = [
     date: "Sept. 26, 2025",
     location: "Windsor, ON",
     time: "6:15–8 PM",
+    description: "More details coming soon! Join us for this special workshop focused on empowering parents with biohacking techniques for the whole family.",
     category: "fall",
     month: "September"
   },
@@ -75,6 +76,7 @@ const workshops: WorkshopItem[] = [
     date: "Oct. 17, 2025",
     location: "Windsor, ON",
     time: "6:15–8 PM",
+    description: "More details coming soon! Learn essential biohacking techniques to improve your academic performance and maintain wellness during the school year.",
     category: "fall",
     month: "October"
   },
@@ -199,14 +201,23 @@ const Workshops = () => {
         </div>
         
         {viewType === 'cards' ? (
-          <Tabs defaultValue="spring-summer" className="mb-12">
+          <Tabs defaultValue="all" className="mb-12">
             <div className="flex justify-center mb-8">
               <TabsList>
+                <TabsTrigger value="all">View All</TabsTrigger>
                 <TabsTrigger value="spring-summer">Spring & Summer</TabsTrigger>
                 <TabsTrigger value="fall">Fall</TabsTrigger>
                 <TabsTrigger value="retreat">Day Retreats</TabsTrigger>
               </TabsList>
             </div>
+            
+            <TabsContent value="all">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {workshops.map((workshop, index) => (
+                  <WorkshopCard key={index} workshop={workshop} />
+                ))}
+              </div>
+            </TabsContent>
             
             <TabsContent value="spring-summer">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
