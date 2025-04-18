@@ -6,9 +6,7 @@ const Activities = () => {
   return <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 sm:px-6">
         <div className="max-w-4xl mx-auto mb-8 space-y-4 text-center">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary">
-            Spring Retreat Activities
-          </h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-primary">Winter Retreat Activities</h2>
           <p className="text-lg text-gray-700">Our winter retreat featured a variety of engaging activities designed to reconnect families and promote wellness through nature, movement, and mindfulness.</p>
           
           <div className="flex flex-wrap justify-center gap-2 mt-4">
