@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from '../Index/sections/Hero';
@@ -9,15 +10,17 @@ import Contact from '../Index/sections/Contact';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const PastEvents = () => {
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Past Events - BioHack Your Family</title>
         <meta name="description" content="View our past family retreat events featuring cabin camping, family bonding, digital detox, and holistic wellness activities." />
       </Helmet>
 
       <div className="container px-4 py-8">
-        <Link to="/" className="inline-flex items-center text-[#333333] hover:text-[#333333]/80 mb-6">
+        <Link to="/" className="inline-flex items-center text-[#7E69AB] hover:text-[#7E69AB]/80 mb-6">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Current Events
         </Link>
@@ -54,6 +57,8 @@ const PastEvents = () => {
       </div>
       
       <Contact />
-    </div>;
+    </div>
+  );
 };
+
 export default PastEvents;
