@@ -1,12 +1,9 @@
-
 import React from 'react';
 import BookingForm from '../../../components/BookingForm';
 import { Separator } from '@/components/ui/separator';
 import { CalendarCheck, Users, MessageSquareText, Clock } from 'lucide-react';
-
 const BookingSection = () => {
-  return (
-    <section id="booking" className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
+  return <section id="booking" className="py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-primary animate-fade-up">
@@ -16,13 +13,9 @@ const BookingSection = () => {
             Register now to secure your spot in our transformative workshops and retreats
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12 rounded-2xl overflow-hidden shadow-xl">
+          <div className="grid md:grid-cols-2 gap-8 mb-12 rounded-2xl overflow-hidden shadow-xl bg-amber-200">
             <div className="relative h-full min-h-[300px]">
-              <img 
-                src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" 
-                alt="Biohack Your Family Wellness" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" alt="Biohack Your Family Wellness" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
                 <h3 className="text-2xl font-bold mb-2">Experience Transformation</h3>
                 <p className="text-white/90">Join our community of wellness-focused families</p>
@@ -91,8 +84,6 @@ const BookingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BookingSection;
