@@ -8,7 +8,6 @@ import ServicesSection from './sections/ServicesSection';
 import Faq from './sections/Faq';
 import BookingSection from './sections/BookingSection';
 import Contact from './sections/Contact';
-import AboutUs from './sections/AboutUs';
 
 const Index = () => {
   useEffect(() => {
@@ -39,7 +38,6 @@ const Index = () => {
 
       <Hero />
       <WhyBiohack />
-      <AboutUs />
       <Workshops />
       <ServicesSection />
       <Faq />
