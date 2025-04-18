@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import RetreatInfo from '../Index/sections/RetreatInfo';
-import Activities from '../Index/sections/Activities';
 import Contact from '../Index/sections/Contact';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -38,7 +36,6 @@ const PastEvents = () => {
 
           <div className="border rounded-lg p-6 bg-gray-50">
             <RetreatInfo />
-            <Activities />
             
             <div className="container px-4 sm:px-6">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Retreat Packages</h2>
