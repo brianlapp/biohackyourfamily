@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Hero from './sections/Hero';
@@ -13,6 +12,9 @@ import Contact from './sections/Contact';
 
 const Index = () => {
   useEffect(() => {
+    // Reset scroll position to top of page on component mount
+    window.scrollTo(0, 0);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
