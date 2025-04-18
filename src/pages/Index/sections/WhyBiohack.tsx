@@ -77,7 +77,7 @@ const WhyBiohack = () => {
             <a href="#workshops" className="inline-block bg-amber-400 hover:bg-amber-500/90 text-white px-6 py-3 rounded-lg transition-all">
               Check out our upcoming workshops
             </a>
-            <span className="inline-block mx-2 text-gray-400">or</span>
+            
             <a href="#booking" className="inline-block text-primary hover:text-primary/90 underline flex items-center gap-1 justify-center">
               Contact us for a discovery call <ArrowRight size={16} />
             </a>
