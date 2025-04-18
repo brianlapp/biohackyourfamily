@@ -3,11 +3,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import RetreatInfo from '../Index/sections/RetreatInfo';
 import Activities from '../Index/sections/Activities';
-import AboutUs from '../Index/sections/AboutUs';
 import Contact from '../Index/sections/Contact';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import EventGallery from '../Index/components/EventGallery';
 
 const PastEvents = () => {
   return (
@@ -40,7 +40,11 @@ const PastEvents = () => {
           <div className="border rounded-lg p-6 bg-gray-50">
             <RetreatInfo />
             <Activities />
-            <AboutUs />
+            
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-center mb-8">Event Gallery</h3>
+              <EventGallery />
+            </div>
           </div>
 
           <div className="mt-12 text-center">
@@ -59,3 +63,4 @@ const PastEvents = () => {
 };
 
 export default PastEvents;
+
