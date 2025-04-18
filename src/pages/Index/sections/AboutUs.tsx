@@ -1,6 +1,6 @@
 import React from 'react';
 const AboutUs = () => {
-  return <section className="py-12 md:py-20 bg-amber-200">
+  return <section className="py-12 md:py-20 bg-amber-100">
       <div className="container px-4 sm:px-6">
         <div className="max-w-6xl mx-auto scroll-animate">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">About Me</h2>
