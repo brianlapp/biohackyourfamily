@@ -1,4 +1,3 @@
-
 interface Workshop {
   title: string;
   date: string;
@@ -11,37 +10,37 @@ export const workshops: Workshop[] = [
     title: "Biohack your Pain & Stress with Fascia Release Maneuvers",
     date: "May 9, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your Teen Series",
     date: "May 24, June 14, July 19, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1471666875520-c75081f42081?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your Fascia for Mothers",
     date: "May 30, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your Fascia for Fathers & Sons",
     date: "June 13, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your Fascia for the Healers",
     date: "June 22, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your Family for Parents",
     date: "Sept. 26, 2025",
     category: "workshop",
-    imageUrl: "https://images.unsplash.com/photo-1643818521563-215b6c4e4ee8?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80"
   },
   {
     title: "Biohack your School Life for Students",
@@ -65,7 +64,7 @@ export const workshops: Workshop[] = [
     title: "Biohack your Wellness for Father & Son",
     date: "Oct. 11, 2025",
     category: "retreat",
-    imageUrl: "https://images.unsplash.com/photo-1510148199876-8a856ee41d42?auto=format&fit=crop&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80"
   },
   {
     title: "One-on-One Consultation",
