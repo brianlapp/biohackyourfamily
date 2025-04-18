@@ -154,7 +154,7 @@ const Activities = () => {
         <div className="flex justify-center">
           <a
             href="#booking"
-            className="inline-block bg-[rgb(79,30,114)] hover:bg-[rgb(79,30,114)]/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all"
+            className="inline-block bg-primary hover:bg-primary/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all"
           >
             Join Our Next Retreat
           </a>
