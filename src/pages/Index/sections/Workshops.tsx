@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -84,14 +85,24 @@ const retreats: WorkshopItem[] = [
   }
 ];
 
+// This is the new workshop card component styled like the past events page
 const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <Card className="hover:shadow-md transition-shadow">
-      <CardHeader>
-        <CardTitle className="text-primary">{workshop.title}</CardTitle>
-        <CardDescription className="flex flex-col gap-1.5 mt-2">
+    <div className="group relative overflow-hidden rounded-lg border border-[#9b87f5]/20 bg-white shadow-lg transition-all hover:shadow-xl">
+      <div className="aspect-[4/3] w-full overflow-hidden">
+        <img 
+          src="/lovable-uploads/b0b8adf0-0b94-4af4-b460-232735a103d9.png"
+          alt={workshop.title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div className="p-6">
+        <Badge variant="secondary" className="mb-2 bg-[#9b87f5]/10 text-[#9b87f5]">Limited spots available!</Badge>
+        <h3 className="text-xl font-bold text-[#9b87f5] mb-4">{workshop.title}</h3>
+        
+        <div className="flex flex-col gap-1.5 mt-2 mb-4">
           <div className="flex items-center">
             <Calendar className="h-4 w-4 mr-2 text-gray-500" />
             <span>{workshop.date}</span>
@@ -104,32 +115,32 @@ const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
             <MapPin className="h-4 w-4 mr-2 text-gray-500" />
             <span>{workshop.location}</span>
           </div>
-        </CardDescription>
-      </CardHeader>
-      
-      {workshop.description && (
-        <CardContent>
-          <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-            <CollapsibleTrigger asChild>
-              <Button variant="ghost" className="text-sm p-0 h-auto">
-                {isOpen ? "Read less" : "Read more"}
-              </Button>
-            </CollapsibleTrigger>
-            <CollapsibleContent className="mt-2 text-sm text-gray-600">
-              <p>{workshop.description}</p>
-            </CollapsibleContent>
-          </Collapsible>
-        </CardContent>
-      )}
-      
-      <CardFooter>
-        <a href="#booking">
-          <Button className="bg-primary hover:bg-primary/90">
-            Register
-          </Button>
-        </a>
-      </CardFooter>
-    </Card>
+        </div>
+        
+        {workshop.description && (
+          <div className="mb-6">
+            <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+              <CollapsibleTrigger asChild>
+                <Button variant="ghost" className="text-sm p-0 h-auto">
+                  {isOpen ? "Read less" : "Read more"}
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="mt-2 text-sm text-gray-600">
+                <p>{workshop.description}</p>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+        )}
+        
+        <div className="mt-auto">
+          <a href="#booking">
+            <Button className="bg-[#9b87f5] hover:bg-[#9b87f5]/90 text-white">
+              Register
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -173,4 +184,3 @@ const Workshops = () => {
 };
 
 export default Workshops;
-

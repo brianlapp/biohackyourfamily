@@ -22,8 +22,6 @@ const springRetreatImages = [
 ];
 
 const EventGallery = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
   return (
     <div className="w-full max-w-5xl mx-auto px-4">
       <Carousel className="w-full">
