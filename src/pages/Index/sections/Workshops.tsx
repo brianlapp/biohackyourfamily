@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock, Filter, Calendar as CalendarIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { workshops as workshopData } from "@/data/workshops";
 
 interface WorkshopItem {
   title: string;
@@ -14,80 +13,86 @@ interface WorkshopItem {
   description?: string;
   category: 'spring-summer' | 'fall' | 'retreat';
   month: string;
-  imageUrl?: string;
 }
 
-// Map the workshop data to our component format
-const mapWorkshopData = (): WorkshopItem[] => {
-  const locationMap: Record<string, string> = {
-    "Biohack your Pain & Stress with Fascia Release Maneuvers": "Windsor, ON",
-    "Biohack your Teen Series": "Windsor, ON",
-    "Biohack your Fascia for Mothers": "Windsor, ON",
-    "Biohack your Fascia for Fathers & Sons": "Windsor, ON",
-    "Biohack your Fascia for the Healers": "Amherstburg, ON",
-    "Biohack your Family for Parents": "Windsor, ON",
-    "Biohack your School Life for Students": "Windsor, ON",
-    "Biohack Your Fertility": "Windsor, ON",
-    "Biohack your Wellness for Mother & Daughter": "Windsor, ON",
-    "Biohack your Wellness for Father & Son": "Windsor, ON",
-  };
-
-  const timeMap: Record<string, string> = {
-    "Biohack your Pain & Stress with Fascia Release Maneuvers": "6:15–8 PM",
-    "Biohack your Teen Series": "4:00-6:00 PM",
-    "Biohack your Fascia for Mothers": "6:15–8 PM",
-    "Biohack your Fascia for Fathers & Sons": "6:15–8 PM",
-    "Biohack your Fascia for the Healers": "12:00-2:00 PM",
-    "Biohack your Family for Parents": "6:15–8 PM",
-    "Biohack your School Life for Students": "6:15–8 PM", 
-    "Biohack Your Fertility": "11 AM–4 PM",
-    "Biohack your Wellness for Mother & Daughter": "11 AM–4 PM",
-    "Biohack your Wellness for Father & Son": "11 AM–4 PM",
-  };
-
-  const descriptionMap: Record<string, string> = {
-    "Biohack your Pain & Stress with Fascia Release Maneuvers": 
-      "You will learn easy hacks to kick start your wellness path, how to do fascia release maneuvers that release your stress and help activate the journey to release back pain, along with breathwork, meditation, sound therapy, forest bathing and grounding to start off your weekend feeling motivated. Limited Spots",
-    "Biohack your Teen Series": 
-      "Support your growing teens with life skill tools that will help them navigate all the stress that comes with teenage life, learning about toxins in common care products they consume on a daily basis, cooking demos that meet their taste buds and protein needs and budget for healthy snacks, navigating their personal goals, peer pressure and social media, understanding emf exposure and why they shouldn't sleep with their cell phones, determining their personal values and creating value based vision boards, mindfulness practices, laughing yoga, guided meditation, fascia release maneuvers and so much more. Prep them for an empowering summer, so they can re-charge and have the tools to stay safe and happy! Limited Spots.",
-    "Biohack your Fascia for Mothers": 
-      "To celebrate you, Mother, the creator, the multi-tasker, the problem solver, the one that carries the world on their shoulders, be guided on how you can fill your cup by releasing the stress and tension with fascia release maneuvers. We will relax you with forest bathing, grounding, guided meditation, sound therapy, reiki support for emotional releases and you will all go home with a custom essential oil gift! Limited Spots",
-    "Biohack your Fascia for Fathers & Sons": 
-      "Holding space for Fathers and Sons so that you two can learn how to support each other in your wellness journey regardless of where you are. You will learn tips on boosting your current nutrition, regardless of how picky the eaters are, we will teach you fascia release maneuvers to help reset stress and tension, we will do neuro-path activities to accelerate your eye and hand and brain coordination, you will enjoy a forest walk, guided meditation and sound therapy. Limited Spots",
-    "Biohack your Fascia for the Healers": 
-      "We were called to step in and guide, teach, support, repair, keep safe, heal and help others. We must learn how to recover from the excess transfer of energy, the stored drama in our body. Learn how to release the stress, the emotional stored trauma, discover biohacking tips to restore your cellular health and learn the fascia release maneuvers you can practice at home to elevate your wellness journey. Whether you're a burned out teacher, nurse, paramedic, police officer, firefighter, social worker, psychologist, holistic healer or you have your own persona that feels called to share this space, we welcome you and look forward to helping you feel lighter. We will gather together in a unique quaint private space, surrounded by fields of green and nature sounds. Limit Spots",
-    "Biohack your Family for Parents": 
-      "More details coming soon! Join us for this special workshop focused on empowering parents with biohacking techniques for the whole family.",
-    "Biohack your School Life for Students": 
-      "More details coming soon! Learn essential biohacking techniques to improve your academic performance and maintain wellness during the school year.",
-  };
-
-  const categoryMap: Record<string, 'spring-summer' | 'fall' | 'retreat'> = {
-    "workshop": "spring-summer",
-    "retreat": "retreat",
-  };
-
-  // Special case for fall workshops
-  const fallWorkshops = ["Biohack your Family for Parents", "Biohack your School Life for Students"];
-
-  return workshopData.filter(w => w.category !== "oneOnOne").map(w => {
-    const month = w.date.split(" ")[0];
-    const category = fallWorkshops.includes(w.title) ? 'fall' : categoryMap[w.category] || 'spring-summer';
-    
-    return {
-      title: w.title,
-      date: w.date,
-      location: locationMap[w.title] || "Windsor, ON",
-      time: timeMap[w.title] || "TBD",
-      description: descriptionMap[w.title],
-      category,
-      month,
-      imageUrl: w.imageUrl
-    };
-  });
-};
-
-const workshops: WorkshopItem[] = mapWorkshopData();
+const workshops: WorkshopItem[] = [{
+  title: "Biohack your Pain & Stress with Fascia Release Maneuvers",
+  date: "May 9, 2025",
+  location: "Windsor, ON",
+  time: "6:15–8 PM",
+  description: "You will learn easy hacks to kick start your wellness path, how to do fascia release maneuvers that release your stress and help activate the journey to release back pain, along with breathwork, meditation, sound therapy, forest bathing and grounding to start off your weekend feeling motivated. Limited Spots",
+  category: "spring-summer",
+  month: "May"
+}, {
+  title: "Biohack your Teen Series",
+  date: "May 24, June 14, July 19, 2025",
+  location: "Windsor, ON",
+  time: "4:00-6:00 PM",
+  description: "Support your growing teens with life skill tools that will help them navigate all the stress that comes with teenage life, learning about toxins in common care products they consume on a daily basis, cooking demos that meet their taste buds and protein needs and budget for healthy snacks, navigating their personal goals, peer pressure and social media, understanding emf exposure and why they shouldn't sleep with their cell phones, determining their personal values and creating value based vision boards, mindfulness practices, laughing yoga, guided meditation, fascia release maneuvers and so much more. Prep them for an empowering summer, so they can re-charge and have the tools to stay safe and happy! Limited Spots.",
+  category: "spring-summer",
+  month: "May"
+}, {
+  title: "Biohack your Fascia for Mothers",
+  date: "May 30, 2025",
+  location: "Windsor, ON",
+  time: "6:15–8 PM",
+  description: "To celebrate you, Mother, the creator, the multi-tasker, the problem solver, the one that carries the world on their shoulders, be guided on how you can fill your cup by releasing the stress and tension with fascia release maneuvers. We will relax you with forest bathing, grounding, guided meditation, sound therapy, reiki support for emotional releases and you will all go home with a custom essential oil gift! Limited Spots",
+  category: "spring-summer",
+  month: "May"
+}, {
+  title: "Biohack your Fascia for Fathers & Sons",
+  date: "June 13, 2025",
+  location: "Windsor, ON",
+  time: "6:15–8 PM",
+  description: "Holding space for Fathers and Sons so that you two can learn how to support each other in your wellness journey regardless of where you are. You will learn tips on boosting your current nutrition, regardless of how picky the eaters are, we will teach you fascia release maneuvers to help reset stress and tension, we will do neuro-path activities to accelerate your eye and hand and brain coordination, you will enjoy a forest walk, guided meditation and sound therapy. Limited Spots",
+  category: "spring-summer",
+  month: "June"
+}, {
+  title: "Biohack your Fascia for the Healers",
+  date: "June 22, 2025",
+  location: "Amherstburg, ON",
+  time: "12:00-2:00 PM",
+  description: "We were called to step in and guide, teach, support, repair, keep safe, heal and help others. We must learn how to recover from the excess transfer of energy, the stored drama in our body. Learn how to release the stress, the emotional stored trauma, discover biohacking tips to restore your cellular health and learn the fascia release maneuvers you can practice at home to elevate your wellness journey. Whether you're a burned out teacher, nurse, paramedic, police officer, firefighter, social worker, psychologist, holistic healer or you have your own persona that feels called to share this space, we welcome you and look forward to helping you feel lighter. We will gather together in a unique quaint private space, surrounded by fields of green and nature sounds. Limit Spots",
+  category: "spring-summer",
+  month: "June"
+}, {
+  title: "Biohack your Family for Parents",
+  date: "Sept. 26, 2025",
+  location: "Windsor, ON",
+  time: "6:15–8 PM",
+  description: "More details coming soon! Join us for this special workshop focused on empowering parents with biohacking techniques for the whole family.",
+  category: "fall",
+  month: "September"
+}, {
+  title: "Biohack your School Life for Students",
+  date: "Oct. 17, 2025",
+  location: "Windsor, ON",
+  time: "6:15–8 PM",
+  description: "More details coming soon! Learn essential biohacking techniques to improve your academic performance and maintain wellness during the school year.",
+  category: "fall",
+  month: "October"
+}, {
+  title: "Biohack Your Fertility",
+  date: "Aug. 2, 2025",
+  location: "Windsor, ON",
+  time: "11 AM–4 PM",
+  category: "retreat",
+  month: "August"
+}, {
+  title: "Biohack your Wellness for Mother & Daughter",
+  date: "Sept. 13, 2025",
+  location: "Windsor, ON",
+  time: "11 AM–4 PM",
+  category: "retreat",
+  month: "September"
+}, {
+  title: "Biohack your Wellness for Father & Son",
+  date: "Oct. 11, 2025",
+  location: "Windsor, ON",
+  time: "11 AM–4 PM",
+  category: "retreat",
+  month: "October"
+}];
 
 const WorkshopCard = ({
   workshop
@@ -96,11 +101,7 @@ const WorkshopCard = ({
 }) => {
   return <div className="group relative overflow-hidden rounded-lg border border-[#35853d]/20 bg-white shadow-lg transition-all hover:shadow-xl">
       <div className="aspect-[4/3] w-full overflow-hidden">
-        <img 
-          src={workshop.imageUrl || "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80"} 
-          alt={workshop.title} 
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
-        />
+        <img src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" alt={workshop.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
       </div>
       <div className="p-6">
         <Badge variant="secondary" className="mb-2 bg-amber-400/30 text-slate-600">Limited spots available!</Badge>
