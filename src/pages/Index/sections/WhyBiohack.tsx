@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { ArrowDownCircle, CheckCircle2, Stars, ArrowRight } from "lucide-react";
-
 const WhyBiohack = () => {
-  return (
-    <section className="py-12 md:py-20 bg-white">
+  return <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary">
+        <h2 className="text-4xl md:text-4xl font-bold text-center mb-8 text-primary">
           Why Biohack Your Family?
         </h2>
         
@@ -77,24 +74,16 @@ const WhyBiohack = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <a 
-              href="#workshops" 
-              className="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-all"
-            >
+            <a href="#workshops" className="inline-block bg-amber-400 hover:bg-amber-500/90 text-white px-6 py-3 rounded-lg transition-all">
               Check out our upcoming workshops
             </a>
             <span className="inline-block mx-2 text-gray-400">or</span>
-            <a 
-              href="#booking" 
-              className="inline-block text-primary hover:text-primary/90 underline flex items-center gap-1 justify-center"
-            >
+            <a href="#booking" className="inline-block text-primary hover:text-primary/90 underline flex items-center gap-1 justify-center">
               Contact us for a discovery call <ArrowRight size={16} />
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyBiohack;
