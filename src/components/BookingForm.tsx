@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -80,62 +82,64 @@ const BookingForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
-      <div className="space-y-2">
-        <label htmlFor="firstName" className="block text-sm font-medium">
-          First Name
-        </label>
-        <input
-          type="text"
-          name="firstName"
-          id="firstName"
-          value={formData.firstName}
-          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-          required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-        />
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-2">
+          <Label htmlFor="firstName" className="text-sm font-medium">
+            First Name
+          </Label>
+          <Input
+            type="text"
+            name="firstName"
+            id="firstName"
+            value={formData.firstName}
+            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+            required
+            className="border-amber-300 focus:border-primary focus:ring-primary"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="lastName" className="text-sm font-medium">
+            Last Name
+          </Label>
+          <Input
+            type="text"
+            name="lastName"
+            id="lastName"
+            value={formData.lastName}
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            required
+            className="border-amber-300 focus:border-primary focus:ring-primary"
+          />
+        </div>
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="lastName" className="block text-sm font-medium">
-          Last Name
-        </label>
-        <input
-          type="text"
-          name="lastName"
-          id="lastName"
-          value={formData.lastName}
-          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-          required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-        />
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="email" className="block text-sm font-medium">
+        <Label htmlFor="email" className="text-sm font-medium">
           Your Email
-        </label>
-        <input
+        </Label>
+        <Input
           type="email"
           name="email"
           id="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
+          className="border-amber-300 focus:border-primary focus:ring-primary"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="programType" className="block text-sm font-medium">
+        <Label htmlFor="programType" className="text-sm font-medium">
           Type of Program
-        </label>
+        </Label>
         <Select 
           name="programType"
           value={formData.programType}
           onValueChange={(value) => setFormData({ ...formData, programType: value })}
         >
-          <SelectTrigger className="w-full">
+          <SelectTrigger className="border-amber-300 focus:border-primary focus:ring-primary bg-amber-50/50">
             <SelectValue placeholder="Select program type" />
           </SelectTrigger>
           <SelectContent className="bg-white">
@@ -148,15 +152,15 @@ const BookingForm = () => {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="workshopTitle" className="block text-sm font-medium">
+        <Label htmlFor="workshopTitle" className="text-sm font-medium">
           Workshop or Service
-        </label>
+        </Label>
         <Select 
           name="workshopTitle"
           value={formData.workshopTitle}
           onValueChange={(value) => setFormData({ ...formData, workshopTitle: value })}
         >
-          <SelectTrigger className="w-full">
+          <SelectTrigger className="border-amber-300 focus:border-primary focus:ring-primary bg-amber-50/50">
             <SelectValue placeholder="Select event" />
           </SelectTrigger>
           <SelectContent className="bg-white max-h-[300px]">
@@ -170,16 +174,16 @@ const BookingForm = () => {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="comments" className="block text-sm font-medium">
+        <Label htmlFor="comments" className="text-sm font-medium">
           Comments or Questions
-        </label>
+        </Label>
         <textarea
           name="comments"
           id="comments"
           rows={4}
           value={formData.comments}
           onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
+          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all bg-amber-50/50 border-amber-300"
         ></textarea>
       </div>
 
@@ -195,4 +199,3 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
-

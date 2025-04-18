@@ -1,4 +1,8 @@
+
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
   return <section className="relative h-screen flex items-center justify-center">
       <div className="absolute inset-0">
@@ -13,8 +17,12 @@ const Hero = () => {
         <p className="inline-block bg-primary text-white px-4 py-2 rounded-md text-xl md:text-2xl mb-4 animate-fade-up max-w-3xl mx-auto font-thin">
           Discover upcoming workshops, day retreats, and personalized treatments focused on hacking your wellness journey for youth, teens, adults and seniors.
         </p>
-        <div className="mt-6">
-          
+        <div className="mt-8">
+          <a href="#booking">
+            <Button className="bg-amber-200 hover:bg-amber-300 text-black font-bold text-lg px-8 py-6 rounded-lg animate-fade-up shadow-lg flex items-center gap-2">
+              Register Now <ArrowRight className="h-5 w-5" />
+            </Button>
+          </a>
         </div>
       </div>
     </section>;
