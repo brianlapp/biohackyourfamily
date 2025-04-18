@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -88,7 +89,7 @@ const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
     <div className="group relative overflow-hidden rounded-lg border border-[#35853d]/20 bg-white shadow-lg transition-all hover:shadow-xl">
       <div className="aspect-[4/3] w-full overflow-hidden">
         <img 
-          src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png"
+          src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png"
           alt={workshop.title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />

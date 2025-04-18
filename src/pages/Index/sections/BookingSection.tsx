@@ -16,8 +16,8 @@ const BookingSection = () => {
           
           <div className="mb-12 rounded-2xl overflow-hidden shadow-xl animate-fade-up">
             <img 
-              src="/lovable-uploads/b4b1b086-211d-495e-a164-838ce3be6c7c.png" 
-              alt="Registration banner" 
+              src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" 
+              alt="Biohack Your Family Wellness" 
               className="w-full h-[300px] object-cover"
             />
           </div>
