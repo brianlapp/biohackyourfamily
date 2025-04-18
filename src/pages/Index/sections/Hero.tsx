@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
   return <section className="relative h-screen flex items-center justify-center">
       <div className="absolute inset-0">
@@ -19,9 +17,7 @@ const Hero = () => {
         </p>
         <div className="mt-8">
           <a href="#booking">
-            <Button className="bg-amber-200 hover:bg-amber-300 text-black font-bold text-lg px-8 py-6 rounded-lg animate-fade-up shadow-lg flex items-center gap-2">
-              Register Now <ArrowRight className="h-5 w-5" />
-            </Button>
+            
           </a>
         </div>
       </div>
