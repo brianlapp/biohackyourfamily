@@ -50,7 +50,7 @@ const ServicesSection = () => {
               </CardHeader>
               <CardContent>
                 <a href="#booking">
-                  <Button variant="outline" className="w-full border-primary hover:bg-primary/10 text-amber-500">
+                  <Button variant="outline" className="w-full border-primary hover:bg-primary/10 text-green-950">
                     Learn More
                   </Button>
                 </a>
