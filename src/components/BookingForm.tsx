@@ -10,14 +10,28 @@ import {
   SelectValue,
 } from "./ui/select";
 
+const workshops = [
+  "Biohack your Pain & Stress with Fascia Release Maneuvers - May 9",
+  "Biohack your Teen Series - May 24, June 14, July 19",
+  "Biohack your Fascia for Mothers - May 30",
+  "Biohack your Fascia for Fathers & Sons - June 13",
+  "Biohack your Fascia for the Healers - June 22",
+  "Biohack your Family for Parents - Sept. 26",
+  "Biohack your School Life for Students - Oct. 17",
+  "Biohack Your Fertility - Aug. 2",
+  "Biohack your Wellness for Mother & Daughter - Sept. 13",
+  "Biohack your Wellness for Father & Son - Oct. 11",
+  "One-on-One Consultation",
+  "Discovery Call"
+];
+
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    retreatType: '',
-    adults: '',
-    kids: '',
     email: '',
+    programType: '',
+    workshopTitle: '',
     comments: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,10 +59,9 @@ const BookingForm = () => {
         setFormData({
           firstName: '',
           lastName: '',
-          retreatType: '',
-          adults: '',
-          kids: '',
           email: '',
+          programType: '',
+          workshopTitle: '',
           comments: ''
         });
       } else {
@@ -99,57 +112,6 @@ const BookingForm = () => {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="retreatType" className="block text-sm font-medium">
-          Retreat Type
-        </label>
-        <Select 
-          name="retreatType"
-          value={formData.retreatType}
-          onValueChange={(value) => setFormData({ ...formData, retreatType: value })}
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select retreat type" />
-          </SelectTrigger>
-          <SelectContent className="bg-white">
-            <SelectItem value="weekend">Weekend Cabin</SelectItem>
-            <SelectItem value="oneday">1 Day Retreat</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="adults" className="block text-sm font-medium">
-          Number of Adults
-        </label>
-        <input
-          type="number"
-          name="adults"
-          id="adults"
-          min="1"
-          value={formData.adults}
-          onChange={(e) => setFormData({ ...formData, adults: e.target.value })}
-          required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-        />
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="kids" className="block text-sm font-medium">
-          Number of Kids
-        </label>
-        <input
-          type="number"
-          name="kids"
-          id="kids"
-          min="0"
-          value={formData.kids}
-          onChange={(e) => setFormData({ ...formData, kids: e.target.value })}
-          required
-          className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-        />
-      </div>
-
-      <div className="space-y-2">
         <label htmlFor="email" className="block text-sm font-medium">
           Your Email
         </label>
@@ -162,6 +124,49 @@ const BookingForm = () => {
           required
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all"
         />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="programType" className="block text-sm font-medium">
+          Type of Program
+        </label>
+        <Select 
+          name="programType"
+          value={formData.programType}
+          onValueChange={(value) => setFormData({ ...formData, programType: value })}
+        >
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select program type" />
+          </SelectTrigger>
+          <SelectContent className="bg-white">
+            <SelectItem value="workshop">Workshop</SelectItem>
+            <SelectItem value="dayretreat">Day Retreat</SelectItem>
+            <SelectItem value="oneOnOne">One-on-One Treatment</SelectItem>
+            <SelectItem value="discovery">Discovery Call</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="workshopTitle" className="block text-sm font-medium">
+          Workshop or Service
+        </label>
+        <Select 
+          name="workshopTitle"
+          value={formData.workshopTitle}
+          onValueChange={(value) => setFormData({ ...formData, workshopTitle: value })}
+        >
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select event" />
+          </SelectTrigger>
+          <SelectContent className="bg-white max-h-[300px]">
+            {workshops.map((workshop) => (
+              <SelectItem key={workshop} value={workshop}>
+                {workshop}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="space-y-2">
