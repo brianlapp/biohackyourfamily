@@ -34,7 +34,7 @@ const ServicesSection = () => {
           <p className="mb-8">
             Book a free 15-minute discovery call so we can explore your story and wellness goals and customize a biohacking menu and checklist. There is nothing more important than investing in your health. Call today to discover how easy it is to receive support for your journey.
           </p>
-          <Button className="text-white bg-amber-500 hover:bg-amber-400">
+          <Button className="text-white bg-amber-500 hover:bg-amber-400 text-xl p-8">
             Book a free 15 min discovery call
           </Button>
         </div>
