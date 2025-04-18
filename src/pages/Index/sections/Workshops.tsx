@@ -90,7 +90,7 @@ const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
   return (
     <Card className="hover:shadow-md transition-shadow">
       <CardHeader>
-        <CardTitle className="text-[rgb(79,30,114)]">{workshop.title}</CardTitle>
+        <CardTitle className="text-primary">{workshop.title}</CardTitle>
         <CardDescription className="flex flex-col gap-1.5 mt-2">
           <div className="flex items-center">
             <Calendar className="h-4 w-4 mr-2 text-gray-500" />
@@ -124,7 +124,7 @@ const WorkshopCard = ({ workshop }: { workshop: WorkshopItem }) => {
       
       <CardFooter>
         <a href="#booking">
-          <Button className="bg-[rgb(79,30,114)] hover:bg-[rgb(79,30,114)]/90">
+          <Button className="bg-primary hover:bg-primary/90">
             Register
           </Button>
         </a>
@@ -137,7 +137,7 @@ const Workshops = () => {
   return (
     <section id="workshops" className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-[rgb(79,30,114)]">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary">
           Workshops & Retreats
         </h2>
         
@@ -173,3 +173,4 @@ const Workshops = () => {
 };
 
 export default Workshops;
+

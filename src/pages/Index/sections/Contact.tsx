@@ -13,17 +13,17 @@ const Contact = () => {
               <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <MapPin size={18} className="text-[rgb(79,30,114)]" />
+                  <MapPin size={18} className="text-primary" />
                   <span>Windsor - Essex County</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail size={18} className="text-[rgb(79,30,114)]" />
+                  <Mail size={18} className="text-primary" />
                   <a href="mailto:info@biohackyourfamily.com" className="hover:underline">
                     info@biohackyourfamily.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone size={18} className="text-[rgb(79,30,114)]" />
+                  <Phone size={18} className="text-primary" />
                   <a href="tel:+15555551234" className="hover:underline">
                     (555) 555-1234
                   </a>
@@ -59,3 +59,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

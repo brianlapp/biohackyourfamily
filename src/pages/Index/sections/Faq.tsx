@@ -38,7 +38,7 @@ const Faq = () => {
   return (
     <section className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 sm:px-6">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-[rgb(79,30,114)]">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary">
           Questions & Answers
         </h2>
         
@@ -60,3 +60,4 @@ const Faq = () => {
 };
 
 export default Faq;
+
