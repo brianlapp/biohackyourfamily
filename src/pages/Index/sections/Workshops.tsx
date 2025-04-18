@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock, Filter, Calendar as CalendarIcon } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 interface WorkshopItem {
   title: string;
   date: string;
@@ -13,6 +14,7 @@ interface WorkshopItem {
   category: 'spring-summer' | 'fall' | 'retreat';
   month: string;
 }
+
 const workshops: WorkshopItem[] = [{
   title: "Biohack your Pain & Stress with Fascia Release Maneuvers",
   date: "May 9, 2025",
@@ -91,6 +93,7 @@ const workshops: WorkshopItem[] = [{
   category: "retreat",
   month: "October"
 }];
+
 const WorkshopCard = ({
   workshop
 }: {
@@ -133,6 +136,7 @@ const WorkshopCard = ({
       </div>
     </div>;
 };
+
 const Workshops = () => {
   const [viewType, setViewType] = useState<'cards' | 'timeline'>('cards');
   const filterByMonth = (month: string) => {
@@ -142,6 +146,7 @@ const Workshops = () => {
     const monthOrder = ["May", "June", "July", "August", "September", "October"];
     return monthOrder.indexOf(a) - monthOrder.indexOf(b);
   });
+
   return <section id="workshops" className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 sm:px-6">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-primary">
@@ -149,15 +154,36 @@ const Workshops = () => {
         </h2>
 
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <p className="text-lg text-gray-700 text-left">Throughout the year, we will have a wide variety of workshops catered to different groups and topics that will guide you and your family on how to biohack your wellness. 
+          <div className="text-lg text-gray-700 text-left space-y-4">
+            <p className="bg-soft-gray p-4 rounded-lg border-l-4 border-primary-purple">
+              Throughout the year, we will have a wide variety of workshops catered to different groups and topics that will guide you and your family on how to biohack your wellness.
+            </p>
 
-Teens: They will focus on life skills, mindfulness, navigating products that disrupt their hormones, healthy meal preps and tips, digital screen exposure awareness, laughing yoga and fascia release maneuvers to help navigate teenage stress.
+            <div className="bg-[#F1F0FB] p-4 rounded-lg border-l-4 border-[#9b87f5]">
+              <h4 className="font-bold text-[#7E69AB] mb-2">Teens:</h4>
+              <p>
+                They will focus on life skills, mindfulness, navigating products that disrupt their hormones, healthy meal preps and tips, digital screen exposure awareness, laughing yoga and fascia release maneuvers to help navigate teenage stress.
+              </p>
+            </div>
 
-Adult: We will help navigate pain and stress, teach fascia release maneuvers, DIY face movements and stretches, breathing techniques, meditation, laughter with supporting resources for different groups.
+            <div className="bg-soft-gray p-4 rounded-lg border-l-4 border-primary-purple">
+              <h4 className="font-bold text-secondary-purple mb-2">Adults:</h4>
+              <p>
+                We will help navigate pain and stress, teach fascia release maneuvers, DIY face movements and stretches, breathing techniques, meditation, laughter with supporting resources for different groups.
+              </p>
+            </div>
 
-Seniors: We will support with simple exercises that help keep the eye, brain and hand coordination sharp, provide modified fascia release maneuvers, create a community to stay active, get fresh air and learn how to support each other and focus on longevity.
+            <div className="bg-[#F1F0FB] p-4 rounded-lg border-l-4 border-[#9b87f5]">
+              <h4 className="font-bold text-[#7E69AB] mb-2">Seniors:</h4>
+              <p>
+                We will support with simple exercises that help keep the eye, brain and hand coordination sharp, provide modified fascia release maneuvers, create a community to stay active, get fresh air and learn how to support each other and focus on longevity.
+              </p>
+            </div>
 
-Other Workshops: Parents, Mother and Daughter, Father and Son, Mom, Fertility, Postpartum, EMF, with more to come...</p>
+            <p className="bg-soft-gray p-4 rounded-lg border-l-4 border-primary-purple">
+              Other Workshops: Parents, Mother and Daughter, Father and Son, Mom, Fertility, Postpartum, EMF, with more to come...
+            </p>
+          </div>
         </div>
         
         <div className="flex justify-center gap-4 mb-8">
@@ -252,4 +278,5 @@ Other Workshops: Parents, Mother and Daughter, Father and Son, Mom, Fertility, P
       </div>
     </section>;
 };
+
 export default Workshops;
