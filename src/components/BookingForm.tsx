@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { useToast } from "@/hooks/use-toast";
@@ -11,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { getWorkshopsByCategory } from '@/data/workshops';
 
 const workshops = [
   "Biohack your Pain & Stress with Fascia Release Maneuvers - May 9",
@@ -38,6 +38,12 @@ const BookingForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const [availableWorkshops, setAvailableWorkshops] = useState(getWorkshopsByCategory(''));
+
+  const handleProgramTypeChange = (value: string) => {
+    setFormData(prev => ({ ...prev, programType: value, workshopTitle: '' }));
+    setAvailableWorkshops(getWorkshopsByCategory(value));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -137,7 +143,7 @@ const BookingForm = () => {
         <Select 
           name="programType"
           value={formData.programType}
-          onValueChange={(value) => setFormData({ ...formData, programType: value })}
+          onValueChange={handleProgramTypeChange}
         >
           <SelectTrigger className="border-amber-300 focus:border-primary focus:ring-primary bg-amber-50/50">
             <SelectValue placeholder="Select program type" />
@@ -164,9 +170,9 @@ const BookingForm = () => {
             <SelectValue placeholder="Select event" />
           </SelectTrigger>
           <SelectContent className="bg-white max-h-[300px]">
-            {workshops.map((workshop) => (
-              <SelectItem key={workshop} value={workshop}>
-                {workshop}
+            {availableWorkshops.map(({ label, value }) => (
+              <SelectItem key={value} value={value}>
+                {label}
               </SelectItem>
             ))}
           </SelectContent>
