@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -8,8 +9,16 @@ const CountdownTimer = () => {
     minutes: 0,
     seconds: 0
   });
+  
+  const location = useLocation();
+  const isPastEvent = location.pathname === '/past-events';
 
   useEffect(() => {
+    if (isPastEvent) {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      return;
+    }
+
     const eventDate = new Date('2025-03-14T18:00:00');
     
     const timer = setInterval(() => {
@@ -25,7 +34,7 @@ const CountdownTimer = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPastEvent]);
 
   return (
     <div className="grid grid-cols-4 gap-4 max-w-xs mx-auto my-8">

@@ -1,11 +1,9 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Hero from '../Index/sections/Hero';
 import RetreatInfo from '../Index/sections/RetreatInfo';
 import Activities from '../Index/sections/Activities';
 import AboutUs from '../Index/sections/AboutUs';
-import BookingSection from '../Index/sections/BookingSection';
 import Contact from '../Index/sections/Contact';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -40,7 +38,6 @@ const PastEvents = () => {
           <p className="text-gray-600 mb-6">Our flagship family retreat designed to help families reconnect without digital distractions.</p>
 
           <div className="border rounded-lg p-6 bg-gray-50">
-            <Hero />
             <RetreatInfo />
             <Activities />
             <AboutUs />
