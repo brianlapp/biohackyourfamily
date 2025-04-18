@@ -1,4 +1,3 @@
-
 import React from 'react';
 const Hero = () => {
   return <section className="relative h-screen flex items-center justify-center">
@@ -11,16 +10,13 @@ const Hero = () => {
         <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-up text-white leading-tight">
           Spring 2025 Biohack Your Family Workshops
         </h1>
-        <p className="inline-block bg-primary text-white px-4 py-2 rounded-md text-lg md:text-xl mb-8 animate-fade-up max-w-3xl mx-auto">
+        <p className="inline-block bg-primary text-white px-4 py-2 rounded-md text-xl md:text-2xl mb-4 animate-fade-up max-w-3xl mx-auto font-thin">
           Discover upcoming workshops, day retreats, and personalized treatments focused on hacking your wellness journey for youth, teens, adults and seniors.
         </p>
         <div className="mt-6">
-          <a href="#booking" className="inline-block bg-amber-200 hover:bg-primary/90 text-black px-8 md:px-12 py-4 md:py-5 text-lg md:text-xl rounded-lg transition-all font-bold">
-            Register Now
-          </a>
+          
         </div>
       </div>
     </section>;
 };
 export default Hero;
-
