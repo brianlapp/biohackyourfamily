@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -156,32 +155,32 @@ const Workshops = () => {
 
         <div className="max-w-4xl mx-auto mb-12 text-center">
           <div className="text-lg text-gray-700 text-left space-y-4">
-            <p className="bg-amber-50 p-4 rounded-lg border-l-4 border-primary">
+            <p className="bg-white p-4 rounded-lg border-l-4 border-gray-200">
               Throughout the year, we will have a wide variety of workshops catered to different groups and topics that will guide you and your family on how to biohack your wellness.
             </p>
 
-            <div className="bg-amber-100 p-4 rounded-lg border-l-4 border-amber-500">
-              <h4 className="font-bold text-amber-800 mb-2">Teens:</h4>
+            <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-300">
+              <h4 className="font-bold text-gray-800 mb-2">Teens:</h4>
               <p>
                 They will focus on life skills, mindfulness, navigating products that disrupt their hormones, healthy meal preps and tips, digital screen exposure awareness, laughing yoga and fascia release maneuvers to help navigate teenage stress.
               </p>
             </div>
 
-            <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-primary">
-              <h4 className="font-bold text-amber-800 mb-2">Adults:</h4>
+            <div className="bg-white p-4 rounded-lg border-l-4 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-2">Adults:</h4>
               <p>
                 We will help navigate pain and stress, teach fascia release maneuvers, DIY face movements and stretches, breathing techniques, meditation, laughter with supporting resources for different groups.
               </p>
             </div>
 
-            <div className="bg-amber-100 p-4 rounded-lg border-l-4 border-amber-500">
-              <h4 className="font-bold text-amber-800 mb-2">Seniors:</h4>
+            <div className="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-300">
+              <h4 className="font-bold text-gray-800 mb-2">Seniors:</h4>
               <p>
                 We will support with simple exercises that help keep the eye, brain and hand coordination sharp, provide modified fascia release maneuvers, create a community to stay active, get fresh air and learn how to support each other and focus on longevity.
               </p>
             </div>
 
-            <p className="bg-amber-50 p-4 rounded-lg border-l-4 border-primary">
+            <p className="bg-white p-4 rounded-lg border-l-4 border-gray-200">
               Other Workshops: Parents, Mother and Daughter, Father and Son, Mom, Fertility, Postpartum, EMF, with more to come...
             </p>
           </div>
