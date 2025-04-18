@@ -77,7 +77,7 @@ const WorkshopCard = ({
         <img src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" alt={workshop.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
       </div>
       <div className="p-6">
-        <Badge variant="secondary" className="mb-2 bg-primary/10 text-primary">Limited spots available!</Badge>
+        <Badge variant="secondary" className="mb-2 bg-amber-400/30 text-slate-600">Limited spots available!</Badge>
         <h3 className="text-xl font-bold text-primary mb-4">{workshop.title}</h3>
         
         <div className="flex flex-col gap-1.5 mt-2 mb-4">
