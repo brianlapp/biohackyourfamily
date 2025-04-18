@@ -13,6 +13,7 @@ interface WorkshopItem {
   description?: string;
   category: 'spring-summer' | 'fall' | 'retreat';
   month: string;
+  imageUrl?: string;
 }
 
 const workshops: WorkshopItem[] = [{
@@ -101,7 +102,11 @@ const WorkshopCard = ({
 }) => {
   return <div className="group relative overflow-hidden rounded-lg border border-[#35853d]/20 bg-white shadow-lg transition-all hover:shadow-xl">
       <div className="aspect-[4/3] w-full overflow-hidden">
-        <img src="/lovable-uploads/e367a7ae-7924-4b97-92d6-db29edee011e.png" alt={workshop.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+        <img 
+          src={workshop.imageUrl || "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80"} 
+          alt={workshop.title} 
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+        />
       </div>
       <div className="p-6">
         <Badge variant="secondary" className="mb-2 bg-amber-400/30 text-slate-600">Limited spots available!</Badge>
