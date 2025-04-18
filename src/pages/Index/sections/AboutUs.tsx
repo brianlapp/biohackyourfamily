@@ -1,19 +1,12 @@
-
 import React from 'react';
-
 const AboutUs = () => {
-  return (
-    <section className="py-12 md:py-20 bg-[#F2FCE2]">
+  return <section className="py-12 md:py-20 bg-amber-200">
       <div className="container px-4 sm:px-6">
         <div className="max-w-6xl mx-auto scroll-animate">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">About Me</h2>
           
           <div className="relative">
-            <img 
-              src="/lovable-uploads/76aaad3f-a5fc-484e-9501-adb47387c79b.png" 
-              alt="Collage of outdoor adventures and family activities"
-              className="float-right ml-8 mb-6 w-full md:w-[400px] rounded-lg shadow-lg"
-            />
+            <img src="/lovable-uploads/76aaad3f-a5fc-484e-9501-adb47387c79b.png" alt="Collage of outdoor adventures and family activities" className="float-right ml-8 mb-6 w-full md:w-[400px] rounded-lg shadow-lg" />
             
             <div className="space-y-6 text-gray-700">
               <p className="text-base md:text-lg leading-relaxed">
@@ -32,8 +25,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;

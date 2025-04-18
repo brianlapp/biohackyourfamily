@@ -1,23 +1,12 @@
-
 import React from 'react';
-
 const Hero = () => {
-  return (
-    <section className="relative h-screen flex items-center justify-center">
+  return <section className="relative h-screen flex items-center justify-center">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black opacity-40"></div>
-        <img
-          src="/hero-bg.png"
-          alt="BioHack Your Family retreat - person meditating in nature"
-          className="w-full h-full object-cover"
-        />
+        <img src="/hero-bg.png" alt="BioHack Your Family retreat - person meditating in nature" className="w-full h-full object-cover" />
       </div>
       <div className="container relative z-10 text-center px-4 sm:px-6">
-        <img
-          src="/updated-logo.png"
-          alt="BioHack Your Family Logo"
-          className="w-36 md:w-44 h-auto mx-auto mb-6 md:mb-8 animate-fade-in"
-        />
+        <img src="/updated-logo.png" alt="BioHack Your Family Logo" className="w-36 md:w-44 h-auto mx-auto mb-6 md:mb-8 animate-fade-in" />
         <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-up text-white leading-tight">
           Spring 2025 Biohack Your Family Workshops
         </h1>
@@ -25,17 +14,11 @@ const Hero = () => {
           Discover upcoming workshops, day retreats, and personalized treatments focused on hacking your wellness journey for youth, teens, adults and seniors.
         </p>
         <div className="mt-6">
-          <a 
-            href="#booking" 
-            className="inline-block bg-primary hover:bg-primary/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all"
-          >
+          <a href="#booking" className="inline-block bg-amber-200 hover:bg-primary/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all">
             Register Now
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
-
