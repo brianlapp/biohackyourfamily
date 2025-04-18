@@ -13,7 +13,7 @@ const PastEvents = () => {
       </Helmet>
 
       <div className="container px-4 py-8">
-        <Link to="/" className="inline-flex items-center text-[#7E69AB] hover:text-[#7E69AB]/80 mb-6">
+        <Link to="/" className="inline-flex items-center text-[#7E69AB] hover:text-[#333333]/80 mb-6">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Current Events
         </Link>
