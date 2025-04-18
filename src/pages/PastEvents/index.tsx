@@ -5,10 +5,8 @@ import Contact from '../Index/sections/Contact';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const PastEvents = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Helmet>
         <title>Past Events - BioHack Your Family</title>
         <meta name="description" content="View our past family retreat events featuring cabin camping, family bonding, digital detox, and holistic wellness activities." />
@@ -38,7 +36,7 @@ const PastEvents = () => {
             <RetreatInfo />
             
             <div className="container px-4 sm:px-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Our Retreat Packages</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 pt-24">Our Retreat Packages</h2>
               
               <div className="max-w-4xl mx-auto mb-12 space-y-6 text-base md:text-lg">
                 <p>Experience a transformative Family Retreat designed to strengthen bonds and promote holistic family wellness. Unplug with your family and enjoy a digital detox weekend filled with activities that bring back the simplicity of fresh air, family cooking, family goal planning, music circles, campfires, hiking and more. Book now to elevate your family's wellness journey!</p>
@@ -121,7 +119,7 @@ const PastEvents = () => {
               </div>
 
               <div className="flex justify-center">
-                <a href="#booking" className="inline-block bg-[rgb(79,30,114)] hover:bg-[rgb(79,30,114)]/90 text-white px-6 md:px-10 py-3 md:py-4 text-base md:text-lg rounded-lg transition-all">Join Our Next Retreat</a>
+                
               </div>
             </div>
           </div>
@@ -137,8 +135,6 @@ const PastEvents = () => {
       </div>
       
       <Contact />
-    </div>
-  );
+    </div>;
 };
-
 export default PastEvents;
